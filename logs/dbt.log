@@ -1,0 +1,1922 @@
+
+
+============================== 2022-07-12 11:52:01.535925 | 04ab7fb2-90eb-41fb-a5c2-91406f747e68 ==============================
+11:52:01.535950 [info ] [MainThread]: Running with dbt=1.1.1
+11:52:01.536514 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': '/root/.dbt', 'send_anonymous_usage_stats': True, 'event_buffer_size': 100000, 'quiet': False, 'no_print': False, 'which': 'run', 'rpc_method': 'run', 'indirect_selection': 'eager'}
+11:52:01.536690 [debug] [MainThread]: Tracking: tracking
+11:52:01.541487 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fbd2e13ea00>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fbd2e13e820>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fbd2e13e1c0>]}
+11:52:01.557472 [info ] [MainThread]: Partial parse save file not found. Starting full parse.
+11:52:01.557814 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': '04ab7fb2-90eb-41fb-a5c2-91406f747e68', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fbd2e0e3c40>]}
+11:52:01.571316 [debug] [MainThread]: Parsing macros/relations.sql
+11:52:01.574940 [debug] [MainThread]: Parsing macros/catalog.sql
+11:52:01.578506 [debug] [MainThread]: Parsing macros/adapters.sql
+11:52:01.598130 [debug] [MainThread]: Parsing macros/materializations/snapshot_merge.sql
+11:52:01.599548 [debug] [MainThread]: Parsing macros/etc/statement.sql
+11:52:01.603400 [debug] [MainThread]: Parsing macros/etc/datetime.sql
+11:52:01.610761 [debug] [MainThread]: Parsing macros/generic_test_sql/not_null.sql
+11:52:01.611726 [debug] [MainThread]: Parsing macros/generic_test_sql/accepted_values.sql
+11:52:01.613039 [debug] [MainThread]: Parsing macros/generic_test_sql/unique.sql
+11:52:01.613653 [debug] [MainThread]: Parsing macros/generic_test_sql/relationships.sql
+11:52:01.614388 [debug] [MainThread]: Parsing macros/materializations/configs.sql
+11:52:01.616331 [debug] [MainThread]: Parsing macros/materializations/hooks.sql
+11:52:01.619631 [debug] [MainThread]: Parsing macros/materializations/models/view/create_view_as.sql
+11:52:01.621782 [debug] [MainThread]: Parsing macros/materializations/models/view/create_or_replace_view.sql
+11:52:01.624054 [debug] [MainThread]: Parsing macros/materializations/models/view/helpers.sql
+11:52:01.625267 [debug] [MainThread]: Parsing macros/materializations/models/view/view.sql
+11:52:01.631198 [debug] [MainThread]: Parsing macros/materializations/models/table/table.sql
+11:52:01.637407 [debug] [MainThread]: Parsing macros/materializations/models/table/create_table_as.sql
+11:52:01.639852 [debug] [MainThread]: Parsing macros/materializations/models/incremental/merge.sql
+11:52:01.653780 [debug] [MainThread]: Parsing macros/materializations/models/incremental/on_schema_change.sql
+11:52:01.666887 [debug] [MainThread]: Parsing macros/materializations/models/incremental/is_incremental.sql
+11:52:01.668171 [debug] [MainThread]: Parsing macros/materializations/models/incremental/incremental.sql
+11:52:01.676630 [debug] [MainThread]: Parsing macros/materializations/models/incremental/column_helpers.sql
+11:52:01.680396 [debug] [MainThread]: Parsing macros/materializations/seeds/seed.sql
+11:52:01.685433 [debug] [MainThread]: Parsing macros/materializations/seeds/helpers.sql
+11:52:01.699737 [debug] [MainThread]: Parsing macros/materializations/snapshots/strategies.sql
+11:52:01.713960 [debug] [MainThread]: Parsing macros/materializations/snapshots/snapshot_merge.sql
+11:52:01.715385 [debug] [MainThread]: Parsing macros/materializations/snapshots/helpers.sql
+11:52:01.726148 [debug] [MainThread]: Parsing macros/materializations/snapshots/snapshot.sql
+11:52:01.735333 [debug] [MainThread]: Parsing macros/materializations/tests/test.sql
+11:52:01.739196 [debug] [MainThread]: Parsing macros/materializations/tests/where_subquery.sql
+11:52:01.740756 [debug] [MainThread]: Parsing macros/materializations/tests/helpers.sql
+11:52:01.742260 [debug] [MainThread]: Parsing macros/get_custom_name/get_custom_alias.sql
+11:52:01.743510 [debug] [MainThread]: Parsing macros/get_custom_name/get_custom_schema.sql
+11:52:01.745613 [debug] [MainThread]: Parsing macros/get_custom_name/get_custom_database.sql
+11:52:01.746994 [debug] [MainThread]: Parsing macros/adapters/schema.sql
+11:52:01.748850 [debug] [MainThread]: Parsing macros/adapters/relation.sql
+11:52:01.756971 [debug] [MainThread]: Parsing macros/adapters/freshness.sql
+11:52:01.759521 [debug] [MainThread]: Parsing macros/adapters/metadata.sql
+11:52:01.765736 [debug] [MainThread]: Parsing macros/adapters/indexes.sql
+11:52:01.768031 [debug] [MainThread]: Parsing macros/adapters/columns.sql
+11:52:01.776348 [debug] [MainThread]: Parsing macros/adapters/persist_docs.sql
+11:52:01.780128 [debug] [MainThread]: Parsing tests/generic/builtin.sql
+11:52:01.965883 [debug] [MainThread]: 1699: static parser successfully parsed example/rewards_users.sql
+11:52:02.031366 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '04ab7fb2-90eb-41fb-a5c2-91406f747e68', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fbd2ffbb8e0>]}
+11:52:02.035659 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '04ab7fb2-90eb-41fb-a5c2-91406f747e68', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fbd2ffbbdf0>]}
+11:52:02.035899 [info ] [MainThread]: Found 1 model, 6 tests, 0 snapshots, 0 analyses, 167 macros, 0 operations, 0 seed files, 0 sources, 0 exposures, 0 metrics
+11:52:02.036079 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '04ab7fb2-90eb-41fb-a5c2-91406f747e68', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fbd2f92ff10>]}
+11:52:02.037260 [info ] [MainThread]: 
+11:52:02.037645 [debug] [MainThread]: Acquiring new postgres connection "master"
+11:52:02.038351 [debug] [ThreadPool]: Acquiring new postgres connection "list_rewards"
+11:52:02.046818 [debug] [ThreadPool]: Using postgres connection "list_rewards"
+11:52:02.046953 [debug] [ThreadPool]: On list_rewards: /* {"app": "dbt", "dbt_version": "1.1.1", "profile_name": "airbyte_rewards", "target_name": "dev", "connection_name": "list_rewards"} */
+
+    select distinct nspname from pg_namespace
+  
+11:52:02.047033 [debug] [ThreadPool]: Opening a new connection, currently in state init
+11:52:02.066019 [debug] [ThreadPool]: SQL status: SELECT 4 in 0.02 seconds
+11:52:02.067210 [debug] [ThreadPool]: On list_rewards: Close
+11:52:02.068268 [debug] [ThreadPool]: Acquiring new postgres connection "list_rewards_public"
+11:52:02.073074 [debug] [ThreadPool]: Using postgres connection "list_rewards_public"
+11:52:02.073201 [debug] [ThreadPool]: On list_rewards_public: BEGIN
+11:52:02.073273 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+11:52:02.088396 [debug] [ThreadPool]: SQL status: BEGIN in 0.02 seconds
+11:52:02.088536 [debug] [ThreadPool]: Using postgres connection "list_rewards_public"
+11:52:02.088609 [debug] [ThreadPool]: On list_rewards_public: /* {"app": "dbt", "dbt_version": "1.1.1", "profile_name": "airbyte_rewards", "target_name": "dev", "connection_name": "list_rewards_public"} */
+select
+      'rewards' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'public'
+    union all
+    select
+      'rewards' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'public'
+  
+11:52:02.092054 [debug] [ThreadPool]: SQL status: SELECT 90 in 0.0 seconds
+11:52:02.094449 [debug] [ThreadPool]: On list_rewards_public: ROLLBACK
+11:52:02.094849 [debug] [ThreadPool]: On list_rewards_public: Close
+11:52:02.099131 [debug] [MainThread]: Using postgres connection "master"
+11:52:02.099261 [debug] [MainThread]: On master: BEGIN
+11:52:02.099334 [debug] [MainThread]: Opening a new connection, currently in state init
+11:52:02.116363 [debug] [MainThread]: SQL status: BEGIN in 0.02 seconds
+11:52:02.116483 [debug] [MainThread]: Using postgres connection "master"
+11:52:02.116554 [debug] [MainThread]: On master: /* {"app": "dbt", "dbt_version": "1.1.1", "profile_name": "airbyte_rewards", "target_name": "dev", "connection_name": "master"} */
+with relation as (
+        select
+            pg_rewrite.ev_class as class,
+            pg_rewrite.oid as id
+        from pg_rewrite
+    ),
+    class as (
+        select
+            oid as id,
+            relname as name,
+            relnamespace as schema,
+            relkind as kind
+        from pg_class
+    ),
+    dependency as (
+        select distinct
+            pg_depend.objid as id,
+            pg_depend.refobjid as ref
+        from pg_depend
+    ),
+    schema as (
+        select
+            pg_namespace.oid as id,
+            pg_namespace.nspname as name
+        from pg_namespace
+        where nspname != 'information_schema' and nspname not like 'pg\_%'
+    ),
+    referenced as (
+        select
+            relation.id AS id,
+            referenced_class.name ,
+            referenced_class.schema ,
+            referenced_class.kind
+        from relation
+        join class as referenced_class on relation.class=referenced_class.id
+        where referenced_class.kind in ('r', 'v')
+    ),
+    relationships as (
+        select
+            referenced.name as referenced_name,
+            referenced.schema as referenced_schema_id,
+            dependent_class.name as dependent_name,
+            dependent_class.schema as dependent_schema_id,
+            referenced.kind as kind
+        from referenced
+        join dependency on referenced.id=dependency.id
+        join class as dependent_class on dependency.ref=dependent_class.id
+        where
+            (referenced.name != dependent_class.name or
+             referenced.schema != dependent_class.schema)
+    )
+
+    select
+        referenced_schema.name as referenced_schema,
+        relationships.referenced_name as referenced_name,
+        dependent_schema.name as dependent_schema,
+        relationships.dependent_name as dependent_name
+    from relationships
+    join schema as dependent_schema on relationships.dependent_schema_id=dependent_schema.id
+    join schema as referenced_schema on relationships.referenced_schema_id=referenced_schema.id
+    group by referenced_schema, referenced_name, dependent_schema, dependent_name
+    order by referenced_schema, referenced_name, dependent_schema, dependent_name;
+11:52:02.125961 [debug] [MainThread]: SQL status: SELECT 1 in 0.01 seconds
+11:52:02.126950 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '04ab7fb2-90eb-41fb-a5c2-91406f747e68', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fbd2e06b3a0>]}
+11:52:02.127187 [debug] [MainThread]: On master: ROLLBACK
+11:52:02.127618 [debug] [MainThread]: Using postgres connection "master"
+11:52:02.127724 [debug] [MainThread]: On master: BEGIN
+11:52:02.129979 [debug] [MainThread]: SQL status: BEGIN in 0.0 seconds
+11:52:02.130113 [debug] [MainThread]: On master: COMMIT
+11:52:02.130192 [debug] [MainThread]: Using postgres connection "master"
+11:52:02.130255 [debug] [MainThread]: On master: COMMIT
+11:52:02.130562 [debug] [MainThread]: SQL status: COMMIT in 0.0 seconds
+11:52:02.130679 [debug] [MainThread]: On master: Close
+11:52:02.131013 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+11:52:02.131247 [info ] [MainThread]: 
+11:52:02.137179 [debug] [Thread-1  ]: Began running node model.airbyte_rewards.rewards_users
+11:52:02.137411 [info ] [Thread-1  ]: 1 of 1 START table model public.rewards_users .................................. [RUN]
+11:52:02.137760 [debug] [Thread-1  ]: Acquiring new postgres connection "model.airbyte_rewards.rewards_users"
+11:52:02.137901 [debug] [Thread-1  ]: Began compiling node model.airbyte_rewards.rewards_users
+11:52:02.138004 [debug] [Thread-1  ]: Compiling model.airbyte_rewards.rewards_users
+11:52:02.140399 [debug] [Thread-1  ]: Writing injected SQL for node "model.airbyte_rewards.rewards_users"
+11:52:02.140728 [debug] [Thread-1  ]: finished collecting timing info
+11:52:02.140843 [debug] [Thread-1  ]: Began executing node model.airbyte_rewards.rewards_users
+11:52:02.165459 [debug] [Thread-1  ]: Writing runtime SQL for node "model.airbyte_rewards.rewards_users"
+11:52:02.165823 [debug] [Thread-1  ]: Using postgres connection "model.airbyte_rewards.rewards_users"
+11:52:02.165933 [debug] [Thread-1  ]: On model.airbyte_rewards.rewards_users: BEGIN
+11:52:02.166017 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+11:52:02.181474 [debug] [Thread-1  ]: SQL status: BEGIN in 0.02 seconds
+11:52:02.181609 [debug] [Thread-1  ]: Using postgres connection "model.airbyte_rewards.rewards_users"
+11:52:02.181682 [debug] [Thread-1  ]: On model.airbyte_rewards.rewards_users: /* {"app": "dbt", "dbt_version": "1.1.1", "profile_name": "airbyte_rewards", "target_name": "dev", "node_id": "model.airbyte_rewards.rewards_users"} */
+
+
+  create  table "rewards"."public"."rewards_users__dbt_tmp"
+  as (
+    /*
+    Welcome to your first dbt model!
+    Did you know that you can also configure models directly within SQL files?
+    This will override configurations stated in dbt_project.yml
+
+    Try changing "table" to "view" below
+*/
+
+
+
+-- with source_data as (
+
+--     select 1 as id
+--     union all
+--     select null as id
+
+-- )
+
+
+select
+  id, user_id, first_name, last_name, email, contact, gender, to_timestamp(dob) as dob, location, latitude, longitude, work_status, preferred_languages, is_mother, family_type, interests, durables, to_timestamp(created_time) as created_time, to_timestamp(updated_time) as updated_time, is_deleted, profession_type, income_slab, device_details, is_email_verified, referral_code, referred_by, state_name, is_email_invalid, is_rewards_disabled, rewards_app_login, is_expecting, helpdesk_membership_id, city, user_tags, rfm_cluster_score
+from users
+
+
+/*
+    Uncomment the line below to remove records with null `id` values
+*/
+
+-- where id is not null
+  );
+11:52:03.689573 [debug] [Thread-1  ]: SQL status: SELECT 440630 in 1.51 seconds
+11:52:03.695627 [debug] [Thread-1  ]: Using postgres connection "model.airbyte_rewards.rewards_users"
+11:52:03.695817 [debug] [Thread-1  ]: On model.airbyte_rewards.rewards_users: /* {"app": "dbt", "dbt_version": "1.1.1", "profile_name": "airbyte_rewards", "target_name": "dev", "node_id": "model.airbyte_rewards.rewards_users"} */
+alter table "rewards"."public"."rewards_users__dbt_tmp" rename to "rewards_users"
+11:52:03.696767 [debug] [Thread-1  ]: SQL status: ALTER TABLE in 0.0 seconds
+11:52:03.705643 [debug] [Thread-1  ]: On model.airbyte_rewards.rewards_users: COMMIT
+11:52:03.705788 [debug] [Thread-1  ]: Using postgres connection "model.airbyte_rewards.rewards_users"
+11:52:03.705861 [debug] [Thread-1  ]: On model.airbyte_rewards.rewards_users: COMMIT
+11:52:03.722088 [debug] [Thread-1  ]: SQL status: COMMIT in 0.02 seconds
+11:52:03.726086 [debug] [Thread-1  ]: Using postgres connection "model.airbyte_rewards.rewards_users"
+11:52:03.726216 [debug] [Thread-1  ]: On model.airbyte_rewards.rewards_users: /* {"app": "dbt", "dbt_version": "1.1.1", "profile_name": "airbyte_rewards", "target_name": "dev", "node_id": "model.airbyte_rewards.rewards_users"} */
+drop table if exists "rewards"."public"."rewards_users__dbt_backup" cascade
+11:52:03.728513 [debug] [Thread-1  ]: SQL status: DROP TABLE in 0.0 seconds
+11:52:03.729551 [debug] [Thread-1  ]: finished collecting timing info
+11:52:03.729695 [debug] [Thread-1  ]: On model.airbyte_rewards.rewards_users: Close
+11:52:03.730176 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '04ab7fb2-90eb-41fb-a5c2-91406f747e68', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fbd2e05e1f0>]}
+11:52:03.730538 [info ] [Thread-1  ]: 1 of 1 OK created table model public.rewards_users ............................. [[32mSELECT 440630[0m in 1.59s]
+11:52:03.731028 [debug] [Thread-1  ]: Finished running node model.airbyte_rewards.rewards_users
+11:52:03.732111 [debug] [MainThread]: Acquiring new postgres connection "master"
+11:52:03.732254 [debug] [MainThread]: Using postgres connection "master"
+11:52:03.732330 [debug] [MainThread]: On master: BEGIN
+11:52:03.732395 [debug] [MainThread]: Opening a new connection, currently in state closed
+11:52:03.747982 [debug] [MainThread]: SQL status: BEGIN in 0.02 seconds
+11:52:03.748113 [debug] [MainThread]: On master: COMMIT
+11:52:03.748186 [debug] [MainThread]: Using postgres connection "master"
+11:52:03.748251 [debug] [MainThread]: On master: COMMIT
+11:52:03.748517 [debug] [MainThread]: SQL status: COMMIT in 0.0 seconds
+11:52:03.748640 [debug] [MainThread]: On master: Close
+11:52:03.748966 [info ] [MainThread]: 
+11:52:03.749233 [info ] [MainThread]: Finished running 1 table model in 1.71s.
+11:52:03.749427 [debug] [MainThread]: Connection 'master' was properly closed.
+11:52:03.749533 [debug] [MainThread]: Connection 'model.airbyte_rewards.rewards_users' was properly closed.
+11:52:03.753624 [info ] [MainThread]: 
+11:52:03.753803 [info ] [MainThread]: [32mCompleted successfully[0m
+11:52:03.754044 [info ] [MainThread]: 
+11:52:03.754216 [info ] [MainThread]: Done. PASS=1 WARN=0 ERROR=0 SKIP=0 TOTAL=1
+11:52:03.754502 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fbd2f92fa60>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fbd2dbc2d00>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fbd2d3578e0>]}
+
+
+============================== 2022-07-12 12:06:41.993800 | 932f45cb-b60e-4af7-8f16-03fb98581963 ==============================
+12:06:41.993824 [info ] [MainThread]: Running with dbt=1.1.1
+12:06:41.994537 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': '/root/.dbt', 'send_anonymous_usage_stats': True, 'event_buffer_size': 100000, 'quiet': False, 'no_print': False, 'which': 'run', 'rpc_method': 'run', 'indirect_selection': 'eager'}
+12:06:41.994734 [debug] [MainThread]: Tracking: tracking
+12:06:41.999302 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f41793fc6a0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f41793fc880>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f41793fc790>]}
+12:06:42.023356 [info ] [MainThread]: Unable to do partial parsing because profile has changed
+12:06:42.023882 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': '932f45cb-b60e-4af7-8f16-03fb98581963', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f41793fd460>]}
+12:06:42.037033 [debug] [MainThread]: Parsing macros/relations.sql
+12:06:42.039207 [debug] [MainThread]: Parsing macros/catalog.sql
+12:06:42.041207 [debug] [MainThread]: Parsing macros/adapters.sql
+12:06:42.061202 [debug] [MainThread]: Parsing macros/materializations/snapshot_merge.sql
+12:06:42.062676 [debug] [MainThread]: Parsing macros/etc/statement.sql
+12:06:42.066619 [debug] [MainThread]: Parsing macros/etc/datetime.sql
+12:06:42.073954 [debug] [MainThread]: Parsing macros/generic_test_sql/not_null.sql
+12:06:42.074704 [debug] [MainThread]: Parsing macros/generic_test_sql/accepted_values.sql
+12:06:42.075898 [debug] [MainThread]: Parsing macros/generic_test_sql/unique.sql
+12:06:42.076510 [debug] [MainThread]: Parsing macros/generic_test_sql/relationships.sql
+12:06:42.077289 [debug] [MainThread]: Parsing macros/materializations/configs.sql
+12:06:42.079323 [debug] [MainThread]: Parsing macros/materializations/hooks.sql
+12:06:42.082798 [debug] [MainThread]: Parsing macros/materializations/models/view/create_view_as.sql
+12:06:42.084844 [debug] [MainThread]: Parsing macros/materializations/models/view/create_or_replace_view.sql
+12:06:42.087178 [debug] [MainThread]: Parsing macros/materializations/models/view/helpers.sql
+12:06:42.088334 [debug] [MainThread]: Parsing macros/materializations/models/view/view.sql
+12:06:42.094468 [debug] [MainThread]: Parsing macros/materializations/models/table/table.sql
+12:06:42.100729 [debug] [MainThread]: Parsing macros/materializations/models/table/create_table_as.sql
+12:06:42.103217 [debug] [MainThread]: Parsing macros/materializations/models/incremental/merge.sql
+12:06:42.118655 [debug] [MainThread]: Parsing macros/materializations/models/incremental/on_schema_change.sql
+12:06:42.132041 [debug] [MainThread]: Parsing macros/materializations/models/incremental/is_incremental.sql
+12:06:42.133419 [debug] [MainThread]: Parsing macros/materializations/models/incremental/incremental.sql
+12:06:42.142036 [debug] [MainThread]: Parsing macros/materializations/models/incremental/column_helpers.sql
+12:06:42.145964 [debug] [MainThread]: Parsing macros/materializations/seeds/seed.sql
+12:06:42.151127 [debug] [MainThread]: Parsing macros/materializations/seeds/helpers.sql
+12:06:42.165316 [debug] [MainThread]: Parsing macros/materializations/snapshots/strategies.sql
+12:06:42.179892 [debug] [MainThread]: Parsing macros/materializations/snapshots/snapshot_merge.sql
+12:06:42.181399 [debug] [MainThread]: Parsing macros/materializations/snapshots/helpers.sql
+12:06:42.192402 [debug] [MainThread]: Parsing macros/materializations/snapshots/snapshot.sql
+12:06:42.201661 [debug] [MainThread]: Parsing macros/materializations/tests/test.sql
+12:06:42.205518 [debug] [MainThread]: Parsing macros/materializations/tests/where_subquery.sql
+12:06:42.207096 [debug] [MainThread]: Parsing macros/materializations/tests/helpers.sql
+12:06:42.208624 [debug] [MainThread]: Parsing macros/get_custom_name/get_custom_alias.sql
+12:06:42.209926 [debug] [MainThread]: Parsing macros/get_custom_name/get_custom_schema.sql
+12:06:42.212063 [debug] [MainThread]: Parsing macros/get_custom_name/get_custom_database.sql
+12:06:42.213495 [debug] [MainThread]: Parsing macros/adapters/schema.sql
+12:06:42.215413 [debug] [MainThread]: Parsing macros/adapters/relation.sql
+12:06:42.223711 [debug] [MainThread]: Parsing macros/adapters/freshness.sql
+12:06:42.226230 [debug] [MainThread]: Parsing macros/adapters/metadata.sql
+12:06:42.232679 [debug] [MainThread]: Parsing macros/adapters/indexes.sql
+12:06:42.235055 [debug] [MainThread]: Parsing macros/adapters/columns.sql
+12:06:42.243633 [debug] [MainThread]: Parsing macros/adapters/persist_docs.sql
+12:06:42.247436 [debug] [MainThread]: Parsing tests/generic/builtin.sql
+12:06:42.443192 [debug] [MainThread]: 1699: static parser successfully parsed example/rewards_users.sql
+12:06:42.507557 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '932f45cb-b60e-4af7-8f16-03fb98581963', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f41793e1160>]}
+12:06:42.512642 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '932f45cb-b60e-4af7-8f16-03fb98581963', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f4178e9f580>]}
+12:06:42.512914 [info ] [MainThread]: Found 1 model, 6 tests, 0 snapshots, 0 analyses, 167 macros, 0 operations, 0 seed files, 0 sources, 0 exposures, 0 metrics
+12:06:42.513135 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '932f45cb-b60e-4af7-8f16-03fb98581963', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f41793e1130>]}
+12:06:42.514377 [info ] [MainThread]: 
+12:06:42.514789 [debug] [MainThread]: Acquiring new postgres connection "master"
+12:06:42.515535 [debug] [ThreadPool]: Acquiring new postgres connection "list_rewards"
+12:06:42.523900 [debug] [ThreadPool]: Using postgres connection "list_rewards"
+12:06:42.524033 [debug] [ThreadPool]: On list_rewards: /* {"app": "dbt", "dbt_version": "1.1.1", "profile_name": "airbyte_rewards", "target_name": "dev", "connection_name": "list_rewards"} */
+
+    select distinct nspname from pg_namespace
+  
+12:06:42.524121 [debug] [ThreadPool]: Opening a new connection, currently in state init
+12:06:42.537074 [debug] [ThreadPool]: SQL status: SELECT 6 in 0.01 seconds
+12:06:42.538401 [debug] [ThreadPool]: On list_rewards: Close
+12:06:42.539593 [debug] [ThreadPool]: Acquiring new postgres connection "list_rewards_public"
+12:06:42.544908 [debug] [ThreadPool]: Using postgres connection "list_rewards_public"
+12:06:42.545034 [debug] [ThreadPool]: On list_rewards_public: BEGIN
+12:06:42.545154 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+12:06:42.554319 [debug] [ThreadPool]: SQL status: BEGIN in 0.01 seconds
+12:06:42.554456 [debug] [ThreadPool]: Using postgres connection "list_rewards_public"
+12:06:42.554532 [debug] [ThreadPool]: On list_rewards_public: /* {"app": "dbt", "dbt_version": "1.1.1", "profile_name": "airbyte_rewards", "target_name": "dev", "connection_name": "list_rewards_public"} */
+select
+      'rewards' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'public'
+    union all
+    select
+      'rewards' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'public'
+  
+12:06:42.616687 [debug] [ThreadPool]: SQL status: SELECT 86 in 0.06 seconds
+12:06:42.619411 [debug] [ThreadPool]: On list_rewards_public: ROLLBACK
+12:06:42.619918 [debug] [ThreadPool]: On list_rewards_public: Close
+12:06:42.624669 [debug] [MainThread]: Using postgres connection "master"
+12:06:42.624815 [debug] [MainThread]: On master: BEGIN
+12:06:42.624897 [debug] [MainThread]: Opening a new connection, currently in state init
+12:06:42.634343 [debug] [MainThread]: SQL status: BEGIN in 0.01 seconds
+12:06:42.634491 [debug] [MainThread]: Using postgres connection "master"
+12:06:42.634567 [debug] [MainThread]: On master: /* {"app": "dbt", "dbt_version": "1.1.1", "profile_name": "airbyte_rewards", "target_name": "dev", "connection_name": "master"} */
+with relation as (
+        select
+            pg_rewrite.ev_class as class,
+            pg_rewrite.oid as id
+        from pg_rewrite
+    ),
+    class as (
+        select
+            oid as id,
+            relname as name,
+            relnamespace as schema,
+            relkind as kind
+        from pg_class
+    ),
+    dependency as (
+        select distinct
+            pg_depend.objid as id,
+            pg_depend.refobjid as ref
+        from pg_depend
+    ),
+    schema as (
+        select
+            pg_namespace.oid as id,
+            pg_namespace.nspname as name
+        from pg_namespace
+        where nspname != 'information_schema' and nspname not like 'pg\_%'
+    ),
+    referenced as (
+        select
+            relation.id AS id,
+            referenced_class.name ,
+            referenced_class.schema ,
+            referenced_class.kind
+        from relation
+        join class as referenced_class on relation.class=referenced_class.id
+        where referenced_class.kind in ('r', 'v')
+    ),
+    relationships as (
+        select
+            referenced.name as referenced_name,
+            referenced.schema as referenced_schema_id,
+            dependent_class.name as dependent_name,
+            dependent_class.schema as dependent_schema_id,
+            referenced.kind as kind
+        from referenced
+        join dependency on referenced.id=dependency.id
+        join class as dependent_class on dependency.ref=dependent_class.id
+        where
+            (referenced.name != dependent_class.name or
+             referenced.schema != dependent_class.schema)
+    )
+
+    select
+        referenced_schema.name as referenced_schema,
+        relationships.referenced_name as referenced_name,
+        dependent_schema.name as dependent_schema,
+        relationships.dependent_name as dependent_name
+    from relationships
+    join schema as dependent_schema on relationships.dependent_schema_id=dependent_schema.id
+    join schema as referenced_schema on relationships.referenced_schema_id=referenced_schema.id
+    group by referenced_schema, referenced_name, dependent_schema, dependent_name
+    order by referenced_schema, referenced_name, dependent_schema, dependent_name;
+12:06:42.851191 [debug] [MainThread]: SQL status: SELECT 1 in 0.22 seconds
+12:06:42.852521 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '932f45cb-b60e-4af7-8f16-03fb98581963', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f41793e1160>]}
+12:06:42.852858 [debug] [MainThread]: On master: ROLLBACK
+12:06:42.853370 [debug] [MainThread]: Using postgres connection "master"
+12:06:42.853520 [debug] [MainThread]: On master: BEGIN
+12:06:42.855155 [debug] [MainThread]: SQL status: BEGIN in 0.0 seconds
+12:06:42.855305 [debug] [MainThread]: On master: COMMIT
+12:06:42.855384 [debug] [MainThread]: Using postgres connection "master"
+12:06:42.855453 [debug] [MainThread]: On master: COMMIT
+12:06:42.855837 [debug] [MainThread]: SQL status: COMMIT in 0.0 seconds
+12:06:42.855999 [debug] [MainThread]: On master: Close
+12:06:42.856462 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+12:06:42.856675 [info ] [MainThread]: 
+12:06:42.860234 [debug] [Thread-1  ]: Began running node model.airbyte_rewards.rewards_users
+12:06:42.860500 [info ] [Thread-1  ]: 1 of 1 START table model public.rewards_users .................................. [RUN]
+12:06:42.860894 [debug] [Thread-1  ]: Acquiring new postgres connection "model.airbyte_rewards.rewards_users"
+12:06:42.861040 [debug] [Thread-1  ]: Began compiling node model.airbyte_rewards.rewards_users
+12:06:42.861183 [debug] [Thread-1  ]: Compiling model.airbyte_rewards.rewards_users
+12:06:42.863797 [debug] [Thread-1  ]: Writing injected SQL for node "model.airbyte_rewards.rewards_users"
+12:06:42.864117 [debug] [Thread-1  ]: finished collecting timing info
+12:06:42.864237 [debug] [Thread-1  ]: Began executing node model.airbyte_rewards.rewards_users
+12:06:42.890839 [debug] [Thread-1  ]: Writing runtime SQL for node "model.airbyte_rewards.rewards_users"
+12:06:42.891280 [debug] [Thread-1  ]: Using postgres connection "model.airbyte_rewards.rewards_users"
+12:06:42.891406 [debug] [Thread-1  ]: On model.airbyte_rewards.rewards_users: BEGIN
+12:06:42.891479 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+12:06:42.900811 [debug] [Thread-1  ]: SQL status: BEGIN in 0.01 seconds
+12:06:42.900982 [debug] [Thread-1  ]: Using postgres connection "model.airbyte_rewards.rewards_users"
+12:06:42.901079 [debug] [Thread-1  ]: On model.airbyte_rewards.rewards_users: /* {"app": "dbt", "dbt_version": "1.1.1", "profile_name": "airbyte_rewards", "target_name": "dev", "node_id": "model.airbyte_rewards.rewards_users"} */
+
+
+  create  table "rewards"."public"."rewards_users__dbt_tmp"
+  as (
+    /*
+    Welcome to your first dbt model!
+    Did you know that you can also configure models directly within SQL files?
+    This will override configurations stated in dbt_project.yml
+
+    Try changing "table" to "view" below
+*/
+
+
+
+-- with source_data as (
+
+--     select 1 as id
+--     union all
+--     select null as id
+
+-- )
+
+
+select
+  id, user_id, first_name, last_name, email, contact, gender, to_timestamp(dob) as dob, location, latitude, longitude, work_status, preferred_languages, is_mother, family_type, interests, durables, to_timestamp(created_time) as created_time, to_timestamp(updated_time) as updated_time, is_deleted, profession_type, income_slab, device_details, is_email_verified, referral_code, referred_by, state_name, is_email_invalid, is_rewards_disabled, rewards_app_login, is_expecting, helpdesk_membership_id, city, user_tags, rfm_cluster_score
+from users
+
+
+/*
+    Uncomment the line below to remove records with null `id` values
+*/
+
+-- where id is not null
+  );
+12:06:44.408225 [debug] [Thread-1  ]: SQL status: SELECT 286046 in 1.51 seconds
+12:06:44.413828 [debug] [Thread-1  ]: Using postgres connection "model.airbyte_rewards.rewards_users"
+12:06:44.414017 [debug] [Thread-1  ]: On model.airbyte_rewards.rewards_users: /* {"app": "dbt", "dbt_version": "1.1.1", "profile_name": "airbyte_rewards", "target_name": "dev", "node_id": "model.airbyte_rewards.rewards_users"} */
+alter table "rewards"."public"."rewards_users__dbt_tmp" rename to "rewards_users"
+12:06:44.414756 [debug] [Thread-1  ]: SQL status: ALTER TABLE in 0.0 seconds
+12:06:44.423324 [debug] [Thread-1  ]: On model.airbyte_rewards.rewards_users: COMMIT
+12:06:44.423448 [debug] [Thread-1  ]: Using postgres connection "model.airbyte_rewards.rewards_users"
+12:06:44.423520 [debug] [Thread-1  ]: On model.airbyte_rewards.rewards_users: COMMIT
+12:06:44.541578 [debug] [Thread-1  ]: SQL status: COMMIT in 0.12 seconds
+12:06:44.546684 [debug] [Thread-1  ]: Using postgres connection "model.airbyte_rewards.rewards_users"
+12:06:44.546848 [debug] [Thread-1  ]: On model.airbyte_rewards.rewards_users: /* {"app": "dbt", "dbt_version": "1.1.1", "profile_name": "airbyte_rewards", "target_name": "dev", "node_id": "model.airbyte_rewards.rewards_users"} */
+drop table if exists "rewards"."public"."rewards_users__dbt_backup" cascade
+12:06:44.548802 [debug] [Thread-1  ]: SQL status: DROP TABLE in 0.0 seconds
+12:06:44.549955 [debug] [Thread-1  ]: finished collecting timing info
+12:06:44.550112 [debug] [Thread-1  ]: On model.airbyte_rewards.rewards_users: Close
+12:06:44.550584 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '932f45cb-b60e-4af7-8f16-03fb98581963', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f41785ffe80>]}
+12:06:44.550922 [info ] [Thread-1  ]: 1 of 1 OK created table model public.rewards_users ............................. [[32mSELECT 286046[0m in 1.69s]
+12:06:44.551396 [debug] [Thread-1  ]: Finished running node model.airbyte_rewards.rewards_users
+12:06:44.552535 [debug] [MainThread]: Acquiring new postgres connection "master"
+12:06:44.552680 [debug] [MainThread]: Using postgres connection "master"
+12:06:44.552756 [debug] [MainThread]: On master: BEGIN
+12:06:44.552818 [debug] [MainThread]: Opening a new connection, currently in state closed
+12:06:44.561937 [debug] [MainThread]: SQL status: BEGIN in 0.01 seconds
+12:06:44.562065 [debug] [MainThread]: On master: COMMIT
+12:06:44.562138 [debug] [MainThread]: Using postgres connection "master"
+12:06:44.562202 [debug] [MainThread]: On master: COMMIT
+12:06:44.562482 [debug] [MainThread]: SQL status: COMMIT in 0.0 seconds
+12:06:44.562589 [debug] [MainThread]: On master: Close
+12:06:44.562939 [info ] [MainThread]: 
+12:06:44.563119 [info ] [MainThread]: Finished running 1 table model in 2.05s.
+12:06:44.563303 [debug] [MainThread]: Connection 'master' was properly closed.
+12:06:44.563416 [debug] [MainThread]: Connection 'model.airbyte_rewards.rewards_users' was properly closed.
+12:06:44.567454 [info ] [MainThread]: 
+12:06:44.567631 [info ] [MainThread]: [32mCompleted successfully[0m
+12:06:44.567868 [info ] [MainThread]: 
+12:06:44.568042 [info ] [MainThread]: Done. PASS=1 WARN=0 ERROR=0 SKIP=0 TOTAL=1
+12:06:44.568347 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f41793e1040>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f41793e18b0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f41785b21f0>]}
+
+
+============================== 2022-07-12 12:08:03.802296 | c40d248d-0a38-43b7-986e-4991bc28d415 ==============================
+12:08:03.802321 [info ] [MainThread]: Running with dbt=1.1.1
+12:08:03.803032 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': '/root/.dbt', 'send_anonymous_usage_stats': True, 'event_buffer_size': 100000, 'quiet': False, 'no_print': False, 'which': 'run', 'rpc_method': 'run', 'indirect_selection': 'eager'}
+12:08:03.803246 [debug] [MainThread]: Tracking: tracking
+12:08:03.808123 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f35c79ca6a0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f35c79ca880>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f35c79ca790>]}
+12:08:03.845368 [debug] [MainThread]: Partial parsing enabled: 1 files deleted, 1 files added, 1 files changed.
+12:08:03.845801 [debug] [MainThread]: Partial parsing: added file: airbyte_rewards://models/example/users.sql
+12:08:03.846235 [debug] [MainThread]: Partial parsing: update schema file: airbyte_rewards://models/example/schema.yml
+12:08:03.846365 [debug] [MainThread]: Partial parsing: deleted file: airbyte_rewards://models/example/rewards_users.sql
+12:08:03.856563 [debug] [MainThread]: 1699: static parser successfully parsed example/users.sql
+12:08:03.938722 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'c40d248d-0a38-43b7-986e-4991bc28d415', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f35c984fc40>]}
+12:08:03.943166 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'c40d248d-0a38-43b7-986e-4991bc28d415', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f35c79c2700>]}
+12:08:03.943411 [info ] [MainThread]: Found 1 model, 6 tests, 0 snapshots, 0 analyses, 167 macros, 0 operations, 0 seed files, 0 sources, 0 exposures, 0 metrics
+12:08:03.943589 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'c40d248d-0a38-43b7-986e-4991bc28d415', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f35c79c2310>]}
+12:08:03.944707 [info ] [MainThread]: 
+12:08:03.945131 [debug] [MainThread]: Acquiring new postgres connection "master"
+12:08:03.945804 [debug] [ThreadPool]: Acquiring new postgres connection "list_rewards"
+12:08:03.954507 [debug] [ThreadPool]: Using postgres connection "list_rewards"
+12:08:03.954631 [debug] [ThreadPool]: On list_rewards: /* {"app": "dbt", "dbt_version": "1.1.1", "profile_name": "airbyte_rewards", "target_name": "dev", "connection_name": "list_rewards"} */
+
+    select distinct nspname from pg_namespace
+  
+12:08:03.954707 [debug] [ThreadPool]: Opening a new connection, currently in state init
+12:08:03.967467 [debug] [ThreadPool]: SQL status: SELECT 6 in 0.01 seconds
+12:08:03.968558 [debug] [ThreadPool]: On list_rewards: Close
+12:08:03.969554 [debug] [ThreadPool]: Acquiring new postgres connection "list_rewards_public"
+12:08:03.974251 [debug] [ThreadPool]: Using postgres connection "list_rewards_public"
+12:08:03.974365 [debug] [ThreadPool]: On list_rewards_public: BEGIN
+12:08:03.974437 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+12:08:03.984674 [debug] [ThreadPool]: SQL status: BEGIN in 0.01 seconds
+12:08:03.984806 [debug] [ThreadPool]: Using postgres connection "list_rewards_public"
+12:08:03.984878 [debug] [ThreadPool]: On list_rewards_public: /* {"app": "dbt", "dbt_version": "1.1.1", "profile_name": "airbyte_rewards", "target_name": "dev", "connection_name": "list_rewards_public"} */
+select
+      'rewards' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'public'
+    union all
+    select
+      'rewards' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'public'
+  
+12:08:03.988738 [debug] [ThreadPool]: SQL status: SELECT 87 in 0.0 seconds
+12:08:03.991057 [debug] [ThreadPool]: On list_rewards_public: ROLLBACK
+12:08:03.991498 [debug] [ThreadPool]: On list_rewards_public: Close
+12:08:03.995688 [debug] [MainThread]: Using postgres connection "master"
+12:08:03.995808 [debug] [MainThread]: On master: BEGIN
+12:08:03.995879 [debug] [MainThread]: Opening a new connection, currently in state init
+12:08:04.005203 [debug] [MainThread]: SQL status: BEGIN in 0.01 seconds
+12:08:04.005323 [debug] [MainThread]: Using postgres connection "master"
+12:08:04.005395 [debug] [MainThread]: On master: /* {"app": "dbt", "dbt_version": "1.1.1", "profile_name": "airbyte_rewards", "target_name": "dev", "connection_name": "master"} */
+with relation as (
+        select
+            pg_rewrite.ev_class as class,
+            pg_rewrite.oid as id
+        from pg_rewrite
+    ),
+    class as (
+        select
+            oid as id,
+            relname as name,
+            relnamespace as schema,
+            relkind as kind
+        from pg_class
+    ),
+    dependency as (
+        select distinct
+            pg_depend.objid as id,
+            pg_depend.refobjid as ref
+        from pg_depend
+    ),
+    schema as (
+        select
+            pg_namespace.oid as id,
+            pg_namespace.nspname as name
+        from pg_namespace
+        where nspname != 'information_schema' and nspname not like 'pg\_%'
+    ),
+    referenced as (
+        select
+            relation.id AS id,
+            referenced_class.name ,
+            referenced_class.schema ,
+            referenced_class.kind
+        from relation
+        join class as referenced_class on relation.class=referenced_class.id
+        where referenced_class.kind in ('r', 'v')
+    ),
+    relationships as (
+        select
+            referenced.name as referenced_name,
+            referenced.schema as referenced_schema_id,
+            dependent_class.name as dependent_name,
+            dependent_class.schema as dependent_schema_id,
+            referenced.kind as kind
+        from referenced
+        join dependency on referenced.id=dependency.id
+        join class as dependent_class on dependency.ref=dependent_class.id
+        where
+            (referenced.name != dependent_class.name or
+             referenced.schema != dependent_class.schema)
+    )
+
+    select
+        referenced_schema.name as referenced_schema,
+        relationships.referenced_name as referenced_name,
+        dependent_schema.name as dependent_schema,
+        relationships.dependent_name as dependent_name
+    from relationships
+    join schema as dependent_schema on relationships.dependent_schema_id=dependent_schema.id
+    join schema as referenced_schema on relationships.referenced_schema_id=referenced_schema.id
+    group by referenced_schema, referenced_name, dependent_schema, dependent_name
+    order by referenced_schema, referenced_name, dependent_schema, dependent_name;
+12:08:04.015299 [debug] [MainThread]: SQL status: SELECT 1 in 0.01 seconds
+12:08:04.016314 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'c40d248d-0a38-43b7-986e-4991bc28d415', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f35c984fc40>]}
+12:08:04.016549 [debug] [MainThread]: On master: ROLLBACK
+12:08:04.016915 [debug] [MainThread]: Using postgres connection "master"
+12:08:04.017020 [debug] [MainThread]: On master: BEGIN
+12:08:04.018767 [debug] [MainThread]: SQL status: BEGIN in 0.0 seconds
+12:08:04.018880 [debug] [MainThread]: On master: COMMIT
+12:08:04.018951 [debug] [MainThread]: Using postgres connection "master"
+12:08:04.019020 [debug] [MainThread]: On master: COMMIT
+12:08:04.019307 [debug] [MainThread]: SQL status: COMMIT in 0.0 seconds
+12:08:04.019413 [debug] [MainThread]: On master: Close
+12:08:04.019761 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+12:08:04.019950 [info ] [MainThread]: 
+12:08:04.022679 [debug] [Thread-1  ]: Began running node model.airbyte_rewards.users
+12:08:04.022907 [info ] [Thread-1  ]: 1 of 1 START table model public.users .......................................... [RUN]
+12:08:04.023266 [debug] [Thread-1  ]: Acquiring new postgres connection "model.airbyte_rewards.users"
+12:08:04.023395 [debug] [Thread-1  ]: Began compiling node model.airbyte_rewards.users
+12:08:04.023489 [debug] [Thread-1  ]: Compiling model.airbyte_rewards.users
+12:08:04.025950 [debug] [Thread-1  ]: Writing injected SQL for node "model.airbyte_rewards.users"
+12:08:04.026204 [debug] [Thread-1  ]: finished collecting timing info
+12:08:04.026314 [debug] [Thread-1  ]: Began executing node model.airbyte_rewards.users
+12:08:04.051545 [debug] [Thread-1  ]: Writing runtime SQL for node "model.airbyte_rewards.users"
+12:08:04.051844 [debug] [Thread-1  ]: Using postgres connection "model.airbyte_rewards.users"
+12:08:04.051941 [debug] [Thread-1  ]: On model.airbyte_rewards.users: BEGIN
+12:08:04.052008 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+12:08:04.062798 [debug] [Thread-1  ]: SQL status: BEGIN in 0.01 seconds
+12:08:04.062932 [debug] [Thread-1  ]: Using postgres connection "model.airbyte_rewards.users"
+12:08:04.063005 [debug] [Thread-1  ]: On model.airbyte_rewards.users: /* {"app": "dbt", "dbt_version": "1.1.1", "profile_name": "airbyte_rewards", "target_name": "dev", "node_id": "model.airbyte_rewards.users"} */
+
+
+  create  table "rewards"."public"."users__dbt_tmp"
+  as (
+    /*
+    Welcome to your first dbt model!
+    Did you know that you can also configure models directly within SQL files?
+    This will override configurations stated in dbt_project.yml
+
+    Try changing "table" to "view" below
+*/
+
+
+
+-- with source_data as (
+
+--     select 1 as id
+--     union all
+--     select null as id
+
+-- )
+
+
+select
+  id, user_id, first_name, last_name, email, contact, gender, to_timestamp(dob) as dob, location, latitude, longitude, work_status, preferred_languages, is_mother, family_type, interests, durables, to_timestamp(created_time) as created_time, to_timestamp(updated_time) as updated_time, is_deleted, profession_type, income_slab, device_details, is_email_verified, referral_code, referred_by, state_name, is_email_invalid, is_rewards_disabled, rewards_app_login, is_expecting, helpdesk_membership_id, city, user_tags, rfm_cluster_score
+from users
+
+
+/*
+    Uncomment the line below to remove records with null `id` values
+*/
+
+-- where id is not null
+  );
+12:08:05.222043 [debug] [Thread-1  ]: SQL status: SELECT 286046 in 1.16 seconds
+12:08:05.228009 [debug] [Thread-1  ]: Using postgres connection "model.airbyte_rewards.users"
+12:08:05.228196 [debug] [Thread-1  ]: On model.airbyte_rewards.users: /* {"app": "dbt", "dbt_version": "1.1.1", "profile_name": "airbyte_rewards", "target_name": "dev", "node_id": "model.airbyte_rewards.users"} */
+alter table "rewards"."public"."users" rename to "users__dbt_backup"
+12:08:05.229124 [debug] [Thread-1  ]: SQL status: ALTER TABLE in 0.0 seconds
+12:08:05.231171 [debug] [Thread-1  ]: Using postgres connection "model.airbyte_rewards.users"
+12:08:05.231301 [debug] [Thread-1  ]: On model.airbyte_rewards.users: /* {"app": "dbt", "dbt_version": "1.1.1", "profile_name": "airbyte_rewards", "target_name": "dev", "node_id": "model.airbyte_rewards.users"} */
+alter table "rewards"."public"."users__dbt_tmp" rename to "users"
+12:08:05.232096 [debug] [Thread-1  ]: SQL status: ALTER TABLE in 0.0 seconds
+12:08:05.241387 [debug] [Thread-1  ]: On model.airbyte_rewards.users: COMMIT
+12:08:05.241557 [debug] [Thread-1  ]: Using postgres connection "model.airbyte_rewards.users"
+12:08:05.241635 [debug] [Thread-1  ]: On model.airbyte_rewards.users: COMMIT
+12:08:05.391233 [debug] [Thread-1  ]: SQL status: COMMIT in 0.15 seconds
+12:08:05.396004 [debug] [Thread-1  ]: Using postgres connection "model.airbyte_rewards.users"
+12:08:05.396156 [debug] [Thread-1  ]: On model.airbyte_rewards.users: /* {"app": "dbt", "dbt_version": "1.1.1", "profile_name": "airbyte_rewards", "target_name": "dev", "node_id": "model.airbyte_rewards.users"} */
+drop table if exists "rewards"."public"."users__dbt_backup" cascade
+12:08:05.708758 [debug] [Thread-1  ]: SQL status: DROP TABLE in 0.31 seconds
+12:08:05.710178 [debug] [Thread-1  ]: finished collecting timing info
+12:08:05.710379 [debug] [Thread-1  ]: On model.airbyte_rewards.users: Close
+12:08:05.710967 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'c40d248d-0a38-43b7-986e-4991bc28d415', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f35c53da760>]}
+12:08:05.711365 [info ] [Thread-1  ]: 1 of 1 OK created table model public.users ..................................... [[32mSELECT 286046[0m in 1.69s]
+12:08:05.711866 [debug] [Thread-1  ]: Finished running node model.airbyte_rewards.users
+12:08:05.712961 [debug] [MainThread]: Acquiring new postgres connection "master"
+12:08:05.713147 [debug] [MainThread]: Using postgres connection "master"
+12:08:05.713237 [debug] [MainThread]: On master: BEGIN
+12:08:05.713304 [debug] [MainThread]: Opening a new connection, currently in state closed
+12:08:05.723636 [debug] [MainThread]: SQL status: BEGIN in 0.01 seconds
+12:08:05.723768 [debug] [MainThread]: On master: COMMIT
+12:08:05.723851 [debug] [MainThread]: Using postgres connection "master"
+12:08:05.723920 [debug] [MainThread]: On master: COMMIT
+12:08:05.724249 [debug] [MainThread]: SQL status: COMMIT in 0.0 seconds
+12:08:05.724377 [debug] [MainThread]: On master: Close
+12:08:05.724711 [info ] [MainThread]: 
+12:08:05.724892 [info ] [MainThread]: Finished running 1 table model in 1.78s.
+12:08:05.725111 [debug] [MainThread]: Connection 'master' was properly closed.
+12:08:05.725219 [debug] [MainThread]: Connection 'model.airbyte_rewards.users' was properly closed.
+12:08:05.729180 [info ] [MainThread]: 
+12:08:05.729369 [info ] [MainThread]: [32mCompleted successfully[0m
+12:08:05.729604 [info ] [MainThread]: 
+12:08:05.729781 [info ] [MainThread]: Done. PASS=1 WARN=0 ERROR=0 SKIP=0 TOTAL=1
+12:08:05.730073 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f35c748d760>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f35c748d340>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f35c748d0a0>]}
+
+
+============================== 2022-07-12 21:43:31.289745 | f07bf5d1-dc6e-4de4-80ba-d1dd042037ea ==============================
+21:43:31.289754 [info ] [MainThread]: Running with dbt=1.1.1
+21:43:31.291866 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': '/root/.dbt', 'send_anonymous_usage_stats': True, 'event_buffer_size': 100000, 'quiet': False, 'no_print': False, 'skip_profile_setup': False, 'which': 'init', 'indirect_selection': 'eager'}
+21:43:31.292400 [debug] [MainThread]: Tracking: tracking
+21:43:31.296399 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f2e6a47d2e0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f2e6a47d1c0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f2e6a47d520>]}
+21:43:31.296991 [info ] [MainThread]: Setting up your profile.
+21:43:33.288836 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f2e6a541f40>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f2e6a541fd0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f2e6a541f10>]}
+
+
+============================== 2022-07-12 21:43:40.353853 | 04e81beb-4705-45f5-a75f-a061766d89c9 ==============================
+21:43:40.353875 [info ] [MainThread]: Running with dbt=1.1.1
+21:43:40.354532 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': '/root/.dbt', 'send_anonymous_usage_stats': True, 'event_buffer_size': 100000, 'quiet': False, 'no_print': False, 'which': 'run', 'rpc_method': 'run', 'indirect_selection': 'eager'}
+21:43:40.354727 [debug] [MainThread]: Tracking: tracking
+21:43:40.359234 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f8ce5e47940>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f8ce5e474c0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f8ce5e47040>]}
+21:43:40.398248 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+21:43:40.398490 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+21:43:40.404107 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '04e81beb-4705-45f5-a75f-a061766d89c9', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f8ce5d580d0>]}
+21:43:40.408761 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '04e81beb-4705-45f5-a75f-a061766d89c9', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f8ce5d26b50>]}
+21:43:40.409027 [info ] [MainThread]: Found 1 model, 6 tests, 0 snapshots, 0 analyses, 167 macros, 0 operations, 0 seed files, 0 sources, 0 exposures, 0 metrics
+21:43:40.409256 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '04e81beb-4705-45f5-a75f-a061766d89c9', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f8ce5d26b20>]}
+21:43:40.410530 [info ] [MainThread]: 
+21:43:40.410936 [debug] [MainThread]: Acquiring new postgres connection "master"
+21:43:40.411706 [debug] [ThreadPool]: Acquiring new postgres connection "list_rewards"
+21:43:40.420107 [debug] [ThreadPool]: Using postgres connection "list_rewards"
+21:43:40.420232 [debug] [ThreadPool]: On list_rewards: /* {"app": "dbt", "dbt_version": "1.1.1", "profile_name": "airbyte_rewards", "target_name": "dev", "connection_name": "list_rewards"} */
+
+    select distinct nspname from pg_namespace
+  
+21:43:40.420311 [debug] [ThreadPool]: Opening a new connection, currently in state init
+21:43:40.433270 [debug] [ThreadPool]: SQL status: SELECT 6 in 0.01 seconds
+21:43:40.434557 [debug] [ThreadPool]: On list_rewards: Close
+21:43:40.435582 [debug] [ThreadPool]: Acquiring new postgres connection "list_rewards_public"
+21:43:40.440599 [debug] [ThreadPool]: Using postgres connection "list_rewards_public"
+21:43:40.440718 [debug] [ThreadPool]: On list_rewards_public: BEGIN
+21:43:40.440791 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+21:43:40.450283 [debug] [ThreadPool]: SQL status: BEGIN in 0.01 seconds
+21:43:40.450427 [debug] [ThreadPool]: Using postgres connection "list_rewards_public"
+21:43:40.450505 [debug] [ThreadPool]: On list_rewards_public: /* {"app": "dbt", "dbt_version": "1.1.1", "profile_name": "airbyte_rewards", "target_name": "dev", "connection_name": "list_rewards_public"} */
+select
+      'rewards' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'public'
+    union all
+    select
+      'rewards' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'public'
+  
+21:43:40.454158 [debug] [ThreadPool]: SQL status: SELECT 86 in 0.0 seconds
+21:43:40.456525 [debug] [ThreadPool]: On list_rewards_public: ROLLBACK
+21:43:40.456958 [debug] [ThreadPool]: On list_rewards_public: Close
+21:43:40.461552 [debug] [MainThread]: Using postgres connection "master"
+21:43:40.461682 [debug] [MainThread]: On master: BEGIN
+21:43:40.461760 [debug] [MainThread]: Opening a new connection, currently in state init
+21:43:40.470809 [debug] [MainThread]: SQL status: BEGIN in 0.01 seconds
+21:43:40.470947 [debug] [MainThread]: Using postgres connection "master"
+21:43:40.471020 [debug] [MainThread]: On master: /* {"app": "dbt", "dbt_version": "1.1.1", "profile_name": "airbyte_rewards", "target_name": "dev", "connection_name": "master"} */
+with relation as (
+        select
+            pg_rewrite.ev_class as class,
+            pg_rewrite.oid as id
+        from pg_rewrite
+    ),
+    class as (
+        select
+            oid as id,
+            relname as name,
+            relnamespace as schema,
+            relkind as kind
+        from pg_class
+    ),
+    dependency as (
+        select distinct
+            pg_depend.objid as id,
+            pg_depend.refobjid as ref
+        from pg_depend
+    ),
+    schema as (
+        select
+            pg_namespace.oid as id,
+            pg_namespace.nspname as name
+        from pg_namespace
+        where nspname != 'information_schema' and nspname not like 'pg\_%'
+    ),
+    referenced as (
+        select
+            relation.id AS id,
+            referenced_class.name ,
+            referenced_class.schema ,
+            referenced_class.kind
+        from relation
+        join class as referenced_class on relation.class=referenced_class.id
+        where referenced_class.kind in ('r', 'v')
+    ),
+    relationships as (
+        select
+            referenced.name as referenced_name,
+            referenced.schema as referenced_schema_id,
+            dependent_class.name as dependent_name,
+            dependent_class.schema as dependent_schema_id,
+            referenced.kind as kind
+        from referenced
+        join dependency on referenced.id=dependency.id
+        join class as dependent_class on dependency.ref=dependent_class.id
+        where
+            (referenced.name != dependent_class.name or
+             referenced.schema != dependent_class.schema)
+    )
+
+    select
+        referenced_schema.name as referenced_schema,
+        relationships.referenced_name as referenced_name,
+        dependent_schema.name as dependent_schema,
+        relationships.dependent_name as dependent_name
+    from relationships
+    join schema as dependent_schema on relationships.dependent_schema_id=dependent_schema.id
+    join schema as referenced_schema on relationships.referenced_schema_id=referenced_schema.id
+    group by referenced_schema, referenced_name, dependent_schema, dependent_name
+    order by referenced_schema, referenced_name, dependent_schema, dependent_name;
+21:43:40.480945 [debug] [MainThread]: SQL status: SELECT 1 in 0.01 seconds
+21:43:40.482144 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '04e81beb-4705-45f5-a75f-a061766d89c9', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f8ce5d26880>]}
+21:43:40.482415 [debug] [MainThread]: On master: ROLLBACK
+21:43:40.482786 [debug] [MainThread]: Using postgres connection "master"
+21:43:40.482905 [debug] [MainThread]: On master: BEGIN
+21:43:40.484526 [debug] [MainThread]: SQL status: BEGIN in 0.0 seconds
+21:43:40.484655 [debug] [MainThread]: On master: COMMIT
+21:43:40.484729 [debug] [MainThread]: Using postgres connection "master"
+21:43:40.484794 [debug] [MainThread]: On master: COMMIT
+21:43:40.485120 [debug] [MainThread]: SQL status: COMMIT in 0.0 seconds
+21:43:40.485244 [debug] [MainThread]: On master: Close
+21:43:40.485637 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+21:43:40.485874 [info ] [MainThread]: 
+21:43:40.489281 [debug] [Thread-1  ]: Began running node model.airbyte_rewards.users
+21:43:40.489539 [info ] [Thread-1  ]: 1 of 1 START table model public.users .......................................... [RUN]
+21:43:40.489930 [debug] [Thread-1  ]: Acquiring new postgres connection "model.airbyte_rewards.users"
+21:43:40.490062 [debug] [Thread-1  ]: Began compiling node model.airbyte_rewards.users
+21:43:40.490165 [debug] [Thread-1  ]: Compiling model.airbyte_rewards.users
+21:43:40.492717 [debug] [Thread-1  ]: Writing injected SQL for node "model.airbyte_rewards.users"
+21:43:40.493011 [debug] [Thread-1  ]: finished collecting timing info
+21:43:40.493158 [debug] [Thread-1  ]: Began executing node model.airbyte_rewards.users
+21:43:40.518271 [debug] [Thread-1  ]: Writing runtime SQL for node "model.airbyte_rewards.users"
+21:43:40.518617 [debug] [Thread-1  ]: Using postgres connection "model.airbyte_rewards.users"
+21:43:40.518723 [debug] [Thread-1  ]: On model.airbyte_rewards.users: BEGIN
+21:43:40.518791 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+21:43:40.528052 [debug] [Thread-1  ]: SQL status: BEGIN in 0.01 seconds
+21:43:40.528228 [debug] [Thread-1  ]: Using postgres connection "model.airbyte_rewards.users"
+21:43:40.528310 [debug] [Thread-1  ]: On model.airbyte_rewards.users: /* {"app": "dbt", "dbt_version": "1.1.1", "profile_name": "airbyte_rewards", "target_name": "dev", "node_id": "model.airbyte_rewards.users"} */
+
+
+  create  table "rewards"."public"."users__dbt_tmp"
+  as (
+    /*
+    Welcome to your first dbt model!
+    Did you know that you can also configure models directly within SQL files?
+    This will override configurations stated in dbt_project.yml
+
+    Try changing "table" to "view" below
+*/
+
+
+
+-- with source_data as (
+
+--     select 1 as id
+--     union all
+--     select null as id
+
+-- )
+
+
+select
+  id, user_id, first_name, last_name, email, contact, gender, to_timestamp(dob) as dob, location, latitude, longitude, work_status, preferred_languages, is_mother, family_type, interests, durables, to_timestamp(created_time) as created_time, to_timestamp(updated_time) as updated_time, is_deleted, profession_type, income_slab, device_details, is_email_verified, referral_code, referred_by, state_name, is_email_invalid, is_rewards_disabled, rewards_app_login, is_expecting, helpdesk_membership_id, city, user_tags, rfm_cluster_score
+from users
+
+
+/*
+    Uncomment the line below to remove records with null `id` values
+*/
+
+-- where id is not null
+  );
+21:43:40.529320 [debug] [Thread-1  ]: Postgres adapter: Postgres error: function to_timestamp(timestamp with time zone) does not exist
+LINE 26: ...d, first_name, last_name, email, contact, gender, to_timesta...
+                                                              ^
+HINT:  No function matches the given name and argument types. You might need to add explicit type casts.
+
+21:43:40.529478 [debug] [Thread-1  ]: On model.airbyte_rewards.users: ROLLBACK
+21:43:40.532247 [debug] [Thread-1  ]: finished collecting timing info
+21:43:40.532408 [debug] [Thread-1  ]: On model.airbyte_rewards.users: Close
+21:43:40.532767 [debug] [Thread-1  ]: Database Error in model users (models/example/users.sql)
+  function to_timestamp(timestamp with time zone) does not exist
+  LINE 26: ...d, first_name, last_name, email, contact, gender, to_timesta...
+                                                                ^
+  HINT:  No function matches the given name and argument types. You might need to add explicit type casts.
+  compiled SQL at target/run/airbyte_rewards/models/example/users.sql
+21:43:40.533042 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '04e81beb-4705-45f5-a75f-a061766d89c9', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f8ce5ccaac0>]}
+21:43:40.533428 [error] [Thread-1  ]: 1 of 1 ERROR creating table model public.users ................................. [[31mERROR[0m in 0.04s]
+21:43:40.533941 [debug] [Thread-1  ]: Finished running node model.airbyte_rewards.users
+21:43:40.535163 [debug] [MainThread]: Acquiring new postgres connection "master"
+21:43:40.535308 [debug] [MainThread]: Using postgres connection "master"
+21:43:40.535397 [debug] [MainThread]: On master: BEGIN
+21:43:40.535463 [debug] [MainThread]: Opening a new connection, currently in state closed
+21:43:40.545338 [debug] [MainThread]: SQL status: BEGIN in 0.01 seconds
+21:43:40.545569 [debug] [MainThread]: On master: COMMIT
+21:43:40.545648 [debug] [MainThread]: Using postgres connection "master"
+21:43:40.545719 [debug] [MainThread]: On master: COMMIT
+21:43:40.546043 [debug] [MainThread]: SQL status: COMMIT in 0.0 seconds
+21:43:40.546210 [debug] [MainThread]: On master: Close
+21:43:40.546691 [info ] [MainThread]: 
+21:43:40.546909 [info ] [MainThread]: Finished running 1 table model in 0.14s.
+21:43:40.547111 [debug] [MainThread]: Connection 'master' was properly closed.
+21:43:40.547212 [debug] [MainThread]: Connection 'model.airbyte_rewards.users' was properly closed.
+21:43:40.588210 [info ] [MainThread]: 
+21:43:40.588467 [info ] [MainThread]: [31mCompleted with 1 error and 0 warnings:[0m
+21:43:40.588722 [info ] [MainThread]: 
+21:43:40.588934 [error] [MainThread]: [33mDatabase Error in model users (models/example/users.sql)[0m
+21:43:40.589121 [error] [MainThread]:   function to_timestamp(timestamp with time zone) does not exist
+21:43:40.589272 [error] [MainThread]:   LINE 26: ...d, first_name, last_name, email, contact, gender, to_timesta...
+21:43:40.589617 [error] [MainThread]:                                                                 ^
+21:43:40.589804 [error] [MainThread]:   HINT:  No function matches the given name and argument types. You might need to add explicit type casts.
+21:43:40.589965 [error] [MainThread]:   compiled SQL at target/run/airbyte_rewards/models/example/users.sql
+21:43:40.590132 [info ] [MainThread]: 
+21:43:40.590301 [info ] [MainThread]: Done. PASS=0 WARN=0 ERROR=1 SKIP=0 TOTAL=1
+21:43:40.590662 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f8ce7ff9eb0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f8ce7ff9f70>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f8ce7ff99d0>]}
+
+
+============================== 2022-07-12 21:44:23.305944 | 6a39ed33-ffc7-436e-8c5b-8051566cafe3 ==============================
+21:44:23.305971 [info ] [MainThread]: Running with dbt=1.1.1
+21:44:23.306730 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': '/root/.dbt', 'send_anonymous_usage_stats': True, 'event_buffer_size': 100000, 'quiet': False, 'no_print': False, 'which': 'run', 'rpc_method': 'run', 'indirect_selection': 'eager'}
+21:44:23.307012 [debug] [MainThread]: Tracking: tracking
+21:44:23.312302 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f4de7ff2250>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f4de7ff2fd0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f4de7ff2af0>]}
+21:44:23.353270 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+21:44:23.353528 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+21:44:23.359604 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '6a39ed33-ffc7-436e-8c5b-8051566cafe3', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f4de7f010d0>]}
+21:44:23.364387 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '6a39ed33-ffc7-436e-8c5b-8051566cafe3', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f4de7f54b20>]}
+21:44:23.364643 [info ] [MainThread]: Found 1 model, 6 tests, 0 snapshots, 0 analyses, 167 macros, 0 operations, 0 seed files, 0 sources, 0 exposures, 0 metrics
+21:44:23.364825 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '6a39ed33-ffc7-436e-8c5b-8051566cafe3', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f4de7f54af0>]}
+21:44:23.366206 [info ] [MainThread]: 
+21:44:23.366648 [debug] [MainThread]: Acquiring new postgres connection "master"
+21:44:23.367453 [debug] [ThreadPool]: Acquiring new postgres connection "list_rewards"
+21:44:23.375887 [debug] [ThreadPool]: Using postgres connection "list_rewards"
+21:44:23.376013 [debug] [ThreadPool]: On list_rewards: /* {"app": "dbt", "dbt_version": "1.1.1", "profile_name": "airbyte_rewards", "target_name": "dev", "connection_name": "list_rewards"} */
+
+    select distinct nspname from pg_namespace
+  
+21:44:23.376094 [debug] [ThreadPool]: Opening a new connection, currently in state init
+21:44:23.389477 [debug] [ThreadPool]: SQL status: SELECT 6 in 0.01 seconds
+21:44:23.390849 [debug] [ThreadPool]: On list_rewards: Close
+21:44:23.392645 [debug] [ThreadPool]: Acquiring new postgres connection "list_rewards_public"
+21:44:23.398068 [debug] [ThreadPool]: Using postgres connection "list_rewards_public"
+21:44:23.398201 [debug] [ThreadPool]: On list_rewards_public: BEGIN
+21:44:23.398277 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+21:44:23.408592 [debug] [ThreadPool]: SQL status: BEGIN in 0.01 seconds
+21:44:23.408723 [debug] [ThreadPool]: Using postgres connection "list_rewards_public"
+21:44:23.408796 [debug] [ThreadPool]: On list_rewards_public: /* {"app": "dbt", "dbt_version": "1.1.1", "profile_name": "airbyte_rewards", "target_name": "dev", "connection_name": "list_rewards_public"} */
+select
+      'rewards' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'public'
+    union all
+    select
+      'rewards' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'public'
+  
+21:44:23.412410 [debug] [ThreadPool]: SQL status: SELECT 86 in 0.0 seconds
+21:44:23.414700 [debug] [ThreadPool]: On list_rewards_public: ROLLBACK
+21:44:23.415601 [debug] [ThreadPool]: On list_rewards_public: Close
+21:44:23.419875 [debug] [MainThread]: Using postgres connection "master"
+21:44:23.419992 [debug] [MainThread]: On master: BEGIN
+21:44:23.420061 [debug] [MainThread]: Opening a new connection, currently in state init
+21:44:23.431790 [debug] [MainThread]: SQL status: BEGIN in 0.01 seconds
+21:44:23.431930 [debug] [MainThread]: Using postgres connection "master"
+21:44:23.432003 [debug] [MainThread]: On master: /* {"app": "dbt", "dbt_version": "1.1.1", "profile_name": "airbyte_rewards", "target_name": "dev", "connection_name": "master"} */
+with relation as (
+        select
+            pg_rewrite.ev_class as class,
+            pg_rewrite.oid as id
+        from pg_rewrite
+    ),
+    class as (
+        select
+            oid as id,
+            relname as name,
+            relnamespace as schema,
+            relkind as kind
+        from pg_class
+    ),
+    dependency as (
+        select distinct
+            pg_depend.objid as id,
+            pg_depend.refobjid as ref
+        from pg_depend
+    ),
+    schema as (
+        select
+            pg_namespace.oid as id,
+            pg_namespace.nspname as name
+        from pg_namespace
+        where nspname != 'information_schema' and nspname not like 'pg\_%'
+    ),
+    referenced as (
+        select
+            relation.id AS id,
+            referenced_class.name ,
+            referenced_class.schema ,
+            referenced_class.kind
+        from relation
+        join class as referenced_class on relation.class=referenced_class.id
+        where referenced_class.kind in ('r', 'v')
+    ),
+    relationships as (
+        select
+            referenced.name as referenced_name,
+            referenced.schema as referenced_schema_id,
+            dependent_class.name as dependent_name,
+            dependent_class.schema as dependent_schema_id,
+            referenced.kind as kind
+        from referenced
+        join dependency on referenced.id=dependency.id
+        join class as dependent_class on dependency.ref=dependent_class.id
+        where
+            (referenced.name != dependent_class.name or
+             referenced.schema != dependent_class.schema)
+    )
+
+    select
+        referenced_schema.name as referenced_schema,
+        relationships.referenced_name as referenced_name,
+        dependent_schema.name as dependent_schema,
+        relationships.dependent_name as dependent_name
+    from relationships
+    join schema as dependent_schema on relationships.dependent_schema_id=dependent_schema.id
+    join schema as referenced_schema on relationships.referenced_schema_id=referenced_schema.id
+    group by referenced_schema, referenced_name, dependent_schema, dependent_name
+    order by referenced_schema, referenced_name, dependent_schema, dependent_name;
+21:44:23.443374 [debug] [MainThread]: SQL status: SELECT 1 in 0.01 seconds
+21:44:23.444449 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '6a39ed33-ffc7-436e-8c5b-8051566cafe3', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f4de7f54850>]}
+21:44:23.444704 [debug] [MainThread]: On master: ROLLBACK
+21:44:23.445131 [debug] [MainThread]: Using postgres connection "master"
+21:44:23.445275 [debug] [MainThread]: On master: BEGIN
+21:44:23.447610 [debug] [MainThread]: SQL status: BEGIN in 0.0 seconds
+21:44:23.447759 [debug] [MainThread]: On master: COMMIT
+21:44:23.447834 [debug] [MainThread]: Using postgres connection "master"
+21:44:23.447905 [debug] [MainThread]: On master: COMMIT
+21:44:23.448197 [debug] [MainThread]: SQL status: COMMIT in 0.0 seconds
+21:44:23.448328 [debug] [MainThread]: On master: Close
+21:44:23.448702 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+21:44:23.448943 [info ] [MainThread]: 
+21:44:23.452205 [debug] [Thread-1  ]: Began running node model.airbyte_rewards.users
+21:44:23.452491 [info ] [Thread-1  ]: 1 of 1 START table model public.users .......................................... [RUN]
+21:44:23.452902 [debug] [Thread-1  ]: Acquiring new postgres connection "model.airbyte_rewards.users"
+21:44:23.453044 [debug] [Thread-1  ]: Began compiling node model.airbyte_rewards.users
+21:44:23.453192 [debug] [Thread-1  ]: Compiling model.airbyte_rewards.users
+21:44:23.455814 [debug] [Thread-1  ]: Writing injected SQL for node "model.airbyte_rewards.users"
+21:44:23.456130 [debug] [Thread-1  ]: finished collecting timing info
+21:44:23.456255 [debug] [Thread-1  ]: Began executing node model.airbyte_rewards.users
+21:44:23.481620 [debug] [Thread-1  ]: Writing runtime SQL for node "model.airbyte_rewards.users"
+21:44:23.481957 [debug] [Thread-1  ]: Using postgres connection "model.airbyte_rewards.users"
+21:44:23.482061 [debug] [Thread-1  ]: On model.airbyte_rewards.users: BEGIN
+21:44:23.482131 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+21:44:23.493011 [debug] [Thread-1  ]: SQL status: BEGIN in 0.01 seconds
+21:44:23.493183 [debug] [Thread-1  ]: Using postgres connection "model.airbyte_rewards.users"
+21:44:23.493259 [debug] [Thread-1  ]: On model.airbyte_rewards.users: /* {"app": "dbt", "dbt_version": "1.1.1", "profile_name": "airbyte_rewards", "target_name": "dev", "node_id": "model.airbyte_rewards.users"} */
+
+
+  create  table "rewards"."public"."users__dbt_tmp"
+  as (
+    /*
+    Welcome to your first dbt model!
+    Did you know that you can also configure models directly within SQL files?
+    This will override configurations stated in dbt_project.yml
+
+    Try changing "table" to "view" below
+*/
+
+
+
+-- with source_data as (
+
+--     select 1 as id
+--     union all
+--     select null as id
+
+-- )
+
+
+select
+  id, user_id, first_name, last_name, email, contact, gender, to_timestamp(dob) as dob, location, latitude, longitude, work_status, preferred_languages, is_mother, family_type, interests, durables, to_timestamp(created_time) as created_time, to_timestamp(updated_time) as updated_time, is_deleted, profession_type, income_slab, device_details, is_email_verified, referral_code, referred_by, state_name, is_email_invalid, is_rewards_disabled, rewards_app_login, is_expecting, helpdesk_membership_id, city, user_tags, rfm_cluster_score
+from users
+
+
+/*
+    Uncomment the line below to remove records with null `id` values
+*/
+
+-- where id is not null
+  );
+21:44:23.494330 [debug] [Thread-1  ]: Postgres adapter: Postgres error: function to_timestamp(timestamp with time zone) does not exist
+LINE 26: ...d, first_name, last_name, email, contact, gender, to_timesta...
+                                                              ^
+HINT:  No function matches the given name and argument types. You might need to add explicit type casts.
+
+21:44:23.494465 [debug] [Thread-1  ]: On model.airbyte_rewards.users: ROLLBACK
+21:44:23.495313 [debug] [Thread-1  ]: finished collecting timing info
+21:44:23.495448 [debug] [Thread-1  ]: On model.airbyte_rewards.users: Close
+21:44:23.495738 [debug] [Thread-1  ]: Database Error in model users (models/example/users.sql)
+  function to_timestamp(timestamp with time zone) does not exist
+  LINE 26: ...d, first_name, last_name, email, contact, gender, to_timesta...
+                                                                ^
+  HINT:  No function matches the given name and argument types. You might need to add explicit type casts.
+  compiled SQL at target/run/airbyte_rewards/models/example/users.sql
+21:44:23.496013 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '6a39ed33-ffc7-436e-8c5b-8051566cafe3', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f4de7e748b0>]}
+21:44:23.496297 [error] [Thread-1  ]: 1 of 1 ERROR creating table model public.users ................................. [[31mERROR[0m in 0.04s]
+21:44:23.496745 [debug] [Thread-1  ]: Finished running node model.airbyte_rewards.users
+21:44:23.497755 [debug] [MainThread]: Acquiring new postgres connection "master"
+21:44:23.497890 [debug] [MainThread]: Using postgres connection "master"
+21:44:23.497965 [debug] [MainThread]: On master: BEGIN
+21:44:23.498027 [debug] [MainThread]: Opening a new connection, currently in state closed
+21:44:23.507595 [debug] [MainThread]: SQL status: BEGIN in 0.01 seconds
+21:44:23.507721 [debug] [MainThread]: On master: COMMIT
+21:44:23.507794 [debug] [MainThread]: Using postgres connection "master"
+21:44:23.507859 [debug] [MainThread]: On master: COMMIT
+21:44:23.508127 [debug] [MainThread]: SQL status: COMMIT in 0.0 seconds
+21:44:23.508238 [debug] [MainThread]: On master: Close
+21:44:23.508565 [info ] [MainThread]: 
+21:44:23.508747 [info ] [MainThread]: Finished running 1 table model in 0.14s.
+21:44:23.508935 [debug] [MainThread]: Connection 'master' was properly closed.
+21:44:23.509034 [debug] [MainThread]: Connection 'model.airbyte_rewards.users' was properly closed.
+21:44:23.542427 [info ] [MainThread]: 
+21:44:23.542631 [info ] [MainThread]: [31mCompleted with 1 error and 0 warnings:[0m
+21:44:23.542857 [info ] [MainThread]: 
+21:44:23.543063 [error] [MainThread]: [33mDatabase Error in model users (models/example/users.sql)[0m
+21:44:23.543223 [error] [MainThread]:   function to_timestamp(timestamp with time zone) does not exist
+21:44:23.543375 [error] [MainThread]:   LINE 26: ...d, first_name, last_name, email, contact, gender, to_timesta...
+21:44:23.543521 [error] [MainThread]:                                                                 ^
+21:44:23.543684 [error] [MainThread]:   HINT:  No function matches the given name and argument types. You might need to add explicit type casts.
+21:44:23.543842 [error] [MainThread]:   compiled SQL at target/run/airbyte_rewards/models/example/users.sql
+21:44:23.544005 [info ] [MainThread]: 
+21:44:23.544159 [info ] [MainThread]: Done. PASS=0 WARN=0 ERROR=1 SKIP=0 TOTAL=1
+21:44:23.544424 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f4de7ff6640>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f4dea1a4fa0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f4dea1a4880>]}
+
+
+============================== 2022-07-12 21:46:07.834615 | a09cb1da-ceb2-44b5-bd51-4dce777e32f8 ==============================
+21:46:07.834641 [info ] [MainThread]: Running with dbt=1.1.1
+21:46:07.835211 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': '/root/.dbt', 'send_anonymous_usage_stats': True, 'event_buffer_size': 100000, 'quiet': False, 'no_print': False, 'which': 'run', 'rpc_method': 'run', 'indirect_selection': 'eager'}
+21:46:07.835391 [debug] [MainThread]: Tracking: tracking
+21:46:07.839908 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f9ab8080b50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f9ab8080d60>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f9ab8080790>]}
+21:46:07.876791 [debug] [MainThread]: Partial parsing enabled: 1 files deleted, 1 files added, 1 files changed.
+21:46:07.877273 [debug] [MainThread]: Partial parsing: added file: airbyte_rewards://models/example/rewards_users.sql
+21:46:07.877825 [debug] [MainThread]: Partial parsing: update schema file: airbyte_rewards://models/example/schema.yml
+21:46:07.878006 [debug] [MainThread]: Partial parsing: deleted file: airbyte_rewards://models/example/users.sql
+21:46:07.888611 [debug] [MainThread]: 1699: static parser successfully parsed example/rewards_users.sql
+21:46:07.979440 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'a09cb1da-ceb2-44b5-bd51-4dce777e32f8', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f9ab9f06c40>]}
+21:46:07.984069 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'a09cb1da-ceb2-44b5-bd51-4dce777e32f8', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f9ab8079820>]}
+21:46:07.984319 [info ] [MainThread]: Found 1 model, 6 tests, 0 snapshots, 0 analyses, 167 macros, 0 operations, 0 seed files, 0 sources, 0 exposures, 0 metrics
+21:46:07.984501 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'a09cb1da-ceb2-44b5-bd51-4dce777e32f8', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f9ab8079460>]}
+21:46:07.985651 [info ] [MainThread]: 
+21:46:07.986051 [debug] [MainThread]: Acquiring new postgres connection "master"
+21:46:07.986716 [debug] [ThreadPool]: Acquiring new postgres connection "list_rewards"
+21:46:07.994873 [debug] [ThreadPool]: Using postgres connection "list_rewards"
+21:46:07.994993 [debug] [ThreadPool]: On list_rewards: /* {"app": "dbt", "dbt_version": "1.1.1", "profile_name": "airbyte_rewards", "target_name": "dev", "connection_name": "list_rewards"} */
+
+    select distinct nspname from pg_namespace
+  
+21:46:07.995067 [debug] [ThreadPool]: Opening a new connection, currently in state init
+21:46:08.007002 [debug] [ThreadPool]: SQL status: SELECT 6 in 0.01 seconds
+21:46:08.008077 [debug] [ThreadPool]: On list_rewards: Close
+21:46:08.009036 [debug] [ThreadPool]: Acquiring new postgres connection "list_rewards_public"
+21:46:08.013739 [debug] [ThreadPool]: Using postgres connection "list_rewards_public"
+21:46:08.013854 [debug] [ThreadPool]: On list_rewards_public: BEGIN
+21:46:08.013925 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+21:46:08.023179 [debug] [ThreadPool]: SQL status: BEGIN in 0.01 seconds
+21:46:08.023301 [debug] [ThreadPool]: Using postgres connection "list_rewards_public"
+21:46:08.023382 [debug] [ThreadPool]: On list_rewards_public: /* {"app": "dbt", "dbt_version": "1.1.1", "profile_name": "airbyte_rewards", "target_name": "dev", "connection_name": "list_rewards_public"} */
+select
+      'rewards' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'public'
+    union all
+    select
+      'rewards' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'public'
+  
+21:46:08.026542 [debug] [ThreadPool]: SQL status: SELECT 86 in 0.0 seconds
+21:46:08.028714 [debug] [ThreadPool]: On list_rewards_public: ROLLBACK
+21:46:08.029082 [debug] [ThreadPool]: On list_rewards_public: Close
+21:46:08.033043 [debug] [MainThread]: Using postgres connection "master"
+21:46:08.033190 [debug] [MainThread]: On master: BEGIN
+21:46:08.033261 [debug] [MainThread]: Opening a new connection, currently in state init
+21:46:08.042439 [debug] [MainThread]: SQL status: BEGIN in 0.01 seconds
+21:46:08.042568 [debug] [MainThread]: Using postgres connection "master"
+21:46:08.042638 [debug] [MainThread]: On master: /* {"app": "dbt", "dbt_version": "1.1.1", "profile_name": "airbyte_rewards", "target_name": "dev", "connection_name": "master"} */
+with relation as (
+        select
+            pg_rewrite.ev_class as class,
+            pg_rewrite.oid as id
+        from pg_rewrite
+    ),
+    class as (
+        select
+            oid as id,
+            relname as name,
+            relnamespace as schema,
+            relkind as kind
+        from pg_class
+    ),
+    dependency as (
+        select distinct
+            pg_depend.objid as id,
+            pg_depend.refobjid as ref
+        from pg_depend
+    ),
+    schema as (
+        select
+            pg_namespace.oid as id,
+            pg_namespace.nspname as name
+        from pg_namespace
+        where nspname != 'information_schema' and nspname not like 'pg\_%'
+    ),
+    referenced as (
+        select
+            relation.id AS id,
+            referenced_class.name ,
+            referenced_class.schema ,
+            referenced_class.kind
+        from relation
+        join class as referenced_class on relation.class=referenced_class.id
+        where referenced_class.kind in ('r', 'v')
+    ),
+    relationships as (
+        select
+            referenced.name as referenced_name,
+            referenced.schema as referenced_schema_id,
+            dependent_class.name as dependent_name,
+            dependent_class.schema as dependent_schema_id,
+            referenced.kind as kind
+        from referenced
+        join dependency on referenced.id=dependency.id
+        join class as dependent_class on dependency.ref=dependent_class.id
+        where
+            (referenced.name != dependent_class.name or
+             referenced.schema != dependent_class.schema)
+    )
+
+    select
+        referenced_schema.name as referenced_schema,
+        relationships.referenced_name as referenced_name,
+        dependent_schema.name as dependent_schema,
+        relationships.dependent_name as dependent_name
+    from relationships
+    join schema as dependent_schema on relationships.dependent_schema_id=dependent_schema.id
+    join schema as referenced_schema on relationships.referenced_schema_id=referenced_schema.id
+    group by referenced_schema, referenced_name, dependent_schema, dependent_name
+    order by referenced_schema, referenced_name, dependent_schema, dependent_name;
+21:46:08.052493 [debug] [MainThread]: SQL status: SELECT 1 in 0.01 seconds
+21:46:08.053635 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'a09cb1da-ceb2-44b5-bd51-4dce777e32f8', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f9ab9f067c0>]}
+21:46:08.053887 [debug] [MainThread]: On master: ROLLBACK
+21:46:08.054309 [debug] [MainThread]: Using postgres connection "master"
+21:46:08.054423 [debug] [MainThread]: On master: BEGIN
+21:46:08.056699 [debug] [MainThread]: SQL status: BEGIN in 0.0 seconds
+21:46:08.056820 [debug] [MainThread]: On master: COMMIT
+21:46:08.056902 [debug] [MainThread]: Using postgres connection "master"
+21:46:08.056966 [debug] [MainThread]: On master: COMMIT
+21:46:08.057315 [debug] [MainThread]: SQL status: COMMIT in 0.0 seconds
+21:46:08.057433 [debug] [MainThread]: On master: Close
+21:46:08.057790 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+21:46:08.058032 [info ] [MainThread]: 
+21:46:08.060752 [debug] [Thread-1  ]: Began running node model.airbyte_rewards.rewards_users
+21:46:08.060999 [info ] [Thread-1  ]: 1 of 1 START table model public.rewards_users .................................. [RUN]
+21:46:08.061401 [debug] [Thread-1  ]: Acquiring new postgres connection "model.airbyte_rewards.rewards_users"
+21:46:08.061528 [debug] [Thread-1  ]: Began compiling node model.airbyte_rewards.rewards_users
+21:46:08.061626 [debug] [Thread-1  ]: Compiling model.airbyte_rewards.rewards_users
+21:46:08.064169 [debug] [Thread-1  ]: Writing injected SQL for node "model.airbyte_rewards.rewards_users"
+21:46:08.064455 [debug] [Thread-1  ]: finished collecting timing info
+21:46:08.064570 [debug] [Thread-1  ]: Began executing node model.airbyte_rewards.rewards_users
+21:46:08.089679 [debug] [Thread-1  ]: Writing runtime SQL for node "model.airbyte_rewards.rewards_users"
+21:46:08.090014 [debug] [Thread-1  ]: Using postgres connection "model.airbyte_rewards.rewards_users"
+21:46:08.090117 [debug] [Thread-1  ]: On model.airbyte_rewards.rewards_users: BEGIN
+21:46:08.090185 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+21:46:08.099757 [debug] [Thread-1  ]: SQL status: BEGIN in 0.01 seconds
+21:46:08.099884 [debug] [Thread-1  ]: Using postgres connection "model.airbyte_rewards.rewards_users"
+21:46:08.099956 [debug] [Thread-1  ]: On model.airbyte_rewards.rewards_users: /* {"app": "dbt", "dbt_version": "1.1.1", "profile_name": "airbyte_rewards", "target_name": "dev", "node_id": "model.airbyte_rewards.rewards_users"} */
+
+
+  create  table "rewards"."public"."rewards_users__dbt_tmp"
+  as (
+    /*
+    Welcome to your first dbt model!
+    Did you know that you can also configure models directly within SQL files?
+    This will override configurations stated in dbt_project.yml
+
+    Try changing "table" to "view" below
+*/
+
+
+
+-- with source_data as (
+
+--     select 1 as id
+--     union all
+--     select null as id
+
+-- )
+
+
+select
+  id, user_id, first_name, last_name, email, contact, gender, to_timestamp(dob) as dob, location, latitude, longitude, work_status, preferred_languages, is_mother, family_type, interests, durables, to_timestamp(created_time) as created_time, to_timestamp(updated_time) as updated_time, is_deleted, profession_type, income_slab, device_details, is_email_verified, referral_code, referred_by, state_name, is_email_invalid, is_rewards_disabled, rewards_app_login, is_expecting, helpdesk_membership_id, city, user_tags, rfm_cluster_score
+from users
+
+
+/*
+    Uncomment the line below to remove records with null `id` values
+*/
+
+-- where id is not null
+  );
+21:46:08.100860 [debug] [Thread-1  ]: Postgres adapter: Postgres error: function to_timestamp(timestamp with time zone) does not exist
+LINE 26: ...d, first_name, last_name, email, contact, gender, to_timesta...
+                                                              ^
+HINT:  No function matches the given name and argument types. You might need to add explicit type casts.
+
+21:46:08.100972 [debug] [Thread-1  ]: On model.airbyte_rewards.rewards_users: ROLLBACK
+21:46:08.104788 [debug] [Thread-1  ]: finished collecting timing info
+21:46:08.104907 [debug] [Thread-1  ]: On model.airbyte_rewards.rewards_users: Close
+21:46:08.105247 [debug] [Thread-1  ]: Database Error in model rewards_users (models/example/rewards_users.sql)
+  function to_timestamp(timestamp with time zone) does not exist
+  LINE 26: ...d, first_name, last_name, email, contact, gender, to_timesta...
+                                                                ^
+  HINT:  No function matches the given name and argument types. You might need to add explicit type casts.
+  compiled SQL at target/run/airbyte_rewards/models/example/rewards_users.sql
+21:46:08.105490 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'a09cb1da-ceb2-44b5-bd51-4dce777e32f8', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f9ab9878d00>]}
+21:46:08.105757 [error] [Thread-1  ]: 1 of 1 ERROR creating table model public.rewards_users ......................... [[31mERROR[0m in 0.04s]
+21:46:08.106312 [debug] [Thread-1  ]: Finished running node model.airbyte_rewards.rewards_users
+21:46:08.107542 [debug] [MainThread]: Acquiring new postgres connection "master"
+21:46:08.107683 [debug] [MainThread]: Using postgres connection "master"
+21:46:08.107759 [debug] [MainThread]: On master: BEGIN
+21:46:08.107821 [debug] [MainThread]: Opening a new connection, currently in state closed
+21:46:08.117325 [debug] [MainThread]: SQL status: BEGIN in 0.01 seconds
+21:46:08.117466 [debug] [MainThread]: On master: COMMIT
+21:46:08.117540 [debug] [MainThread]: Using postgres connection "master"
+21:46:08.117603 [debug] [MainThread]: On master: COMMIT
+21:46:08.118031 [debug] [MainThread]: SQL status: COMMIT in 0.0 seconds
+21:46:08.118158 [debug] [MainThread]: On master: Close
+21:46:08.118496 [info ] [MainThread]: 
+21:46:08.118680 [info ] [MainThread]: Finished running 1 table model in 0.13s.
+21:46:08.118859 [debug] [MainThread]: Connection 'master' was properly closed.
+21:46:08.118961 [debug] [MainThread]: Connection 'model.airbyte_rewards.rewards_users' was properly closed.
+21:46:08.122785 [info ] [MainThread]: 
+21:46:08.122964 [info ] [MainThread]: [31mCompleted with 1 error and 0 warnings:[0m
+21:46:08.123176 [info ] [MainThread]: 
+21:46:08.123351 [error] [MainThread]: [33mDatabase Error in model rewards_users (models/example/rewards_users.sql)[0m
+21:46:08.123547 [error] [MainThread]:   function to_timestamp(timestamp with time zone) does not exist
+21:46:08.123700 [error] [MainThread]:   LINE 26: ...d, first_name, last_name, email, contact, gender, to_timesta...
+21:46:08.123843 [error] [MainThread]:                                                                 ^
+21:46:08.124031 [error] [MainThread]:   HINT:  No function matches the given name and argument types. You might need to add explicit type casts.
+21:46:08.124174 [error] [MainThread]:   compiled SQL at target/run/airbyte_rewards/models/example/rewards_users.sql
+21:46:08.124342 [info ] [MainThread]: 
+21:46:08.124497 [info ] [MainThread]: Done. PASS=0 WARN=0 ERROR=1 SKIP=0 TOTAL=1
+21:46:08.124763 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f9ab7b41790>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f9ab7b41640>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f9ab9878c40>]}
+
+
+============================== 2022-07-12 21:51:47.581403 | 54ec85e3-aa61-49c8-8c86-84558f90bc14 ==============================
+21:51:47.581426 [info ] [MainThread]: Running with dbt=1.1.1
+21:51:47.582131 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': '/root/.dbt', 'send_anonymous_usage_stats': True, 'event_buffer_size': 100000, 'quiet': False, 'no_print': False, 'which': 'run', 'rpc_method': 'run', 'indirect_selection': 'eager'}
+21:51:47.582350 [debug] [MainThread]: Tracking: tracking
+21:51:47.587033 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f86aa394250>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f86aa394fd0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f86aa394af0>]}
+21:51:47.624199 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 1 files changed.
+21:51:47.624799 [debug] [MainThread]: Partial parsing: updated file: airbyte_rewards://models/example/rewards_users.sql
+21:51:47.635627 [debug] [MainThread]: 1699: static parser successfully parsed example/rewards_users.sql
+21:51:47.721990 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '54ec85e3-aa61-49c8-8c86-84558f90bc14', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f86ac216c40>]}
+21:51:47.726499 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '54ec85e3-aa61-49c8-8c86-84558f90bc14', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f86aa392c40>]}
+21:51:47.726746 [info ] [MainThread]: Found 1 model, 6 tests, 0 snapshots, 0 analyses, 167 macros, 0 operations, 0 seed files, 0 sources, 0 exposures, 0 metrics
+21:51:47.726932 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '54ec85e3-aa61-49c8-8c86-84558f90bc14', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f86aa2ed9d0>]}
+21:51:47.728098 [info ] [MainThread]: 
+21:51:47.728563 [debug] [MainThread]: Acquiring new postgres connection "master"
+21:51:47.729295 [debug] [ThreadPool]: Acquiring new postgres connection "list_rewards"
+21:51:47.737443 [debug] [ThreadPool]: Using postgres connection "list_rewards"
+21:51:47.737576 [debug] [ThreadPool]: On list_rewards: /* {"app": "dbt", "dbt_version": "1.1.1", "profile_name": "airbyte_rewards", "target_name": "dev", "connection_name": "list_rewards"} */
+
+    select distinct nspname from pg_namespace
+  
+21:51:47.737654 [debug] [ThreadPool]: Opening a new connection, currently in state init
+21:51:47.750388 [debug] [ThreadPool]: SQL status: SELECT 6 in 0.01 seconds
+21:51:47.751506 [debug] [ThreadPool]: On list_rewards: Close
+21:51:47.752510 [debug] [ThreadPool]: Acquiring new postgres connection "list_rewards_public"
+21:51:47.757144 [debug] [ThreadPool]: Using postgres connection "list_rewards_public"
+21:51:47.757262 [debug] [ThreadPool]: On list_rewards_public: BEGIN
+21:51:47.757337 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+21:51:47.766847 [debug] [ThreadPool]: SQL status: BEGIN in 0.01 seconds
+21:51:47.766982 [debug] [ThreadPool]: Using postgres connection "list_rewards_public"
+21:51:47.767056 [debug] [ThreadPool]: On list_rewards_public: /* {"app": "dbt", "dbt_version": "1.1.1", "profile_name": "airbyte_rewards", "target_name": "dev", "connection_name": "list_rewards_public"} */
+select
+      'rewards' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'public'
+    union all
+    select
+      'rewards' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'public'
+  
+21:51:47.770549 [debug] [ThreadPool]: SQL status: SELECT 86 in 0.0 seconds
+21:51:47.772750 [debug] [ThreadPool]: On list_rewards_public: ROLLBACK
+21:51:47.773158 [debug] [ThreadPool]: On list_rewards_public: Close
+21:51:47.777208 [debug] [MainThread]: Using postgres connection "master"
+21:51:47.777332 [debug] [MainThread]: On master: BEGIN
+21:51:47.777405 [debug] [MainThread]: Opening a new connection, currently in state init
+21:51:47.786903 [debug] [MainThread]: SQL status: BEGIN in 0.01 seconds
+21:51:47.787037 [debug] [MainThread]: Using postgres connection "master"
+21:51:47.787119 [debug] [MainThread]: On master: /* {"app": "dbt", "dbt_version": "1.1.1", "profile_name": "airbyte_rewards", "target_name": "dev", "connection_name": "master"} */
+with relation as (
+        select
+            pg_rewrite.ev_class as class,
+            pg_rewrite.oid as id
+        from pg_rewrite
+    ),
+    class as (
+        select
+            oid as id,
+            relname as name,
+            relnamespace as schema,
+            relkind as kind
+        from pg_class
+    ),
+    dependency as (
+        select distinct
+            pg_depend.objid as id,
+            pg_depend.refobjid as ref
+        from pg_depend
+    ),
+    schema as (
+        select
+            pg_namespace.oid as id,
+            pg_namespace.nspname as name
+        from pg_namespace
+        where nspname != 'information_schema' and nspname not like 'pg\_%'
+    ),
+    referenced as (
+        select
+            relation.id AS id,
+            referenced_class.name ,
+            referenced_class.schema ,
+            referenced_class.kind
+        from relation
+        join class as referenced_class on relation.class=referenced_class.id
+        where referenced_class.kind in ('r', 'v')
+    ),
+    relationships as (
+        select
+            referenced.name as referenced_name,
+            referenced.schema as referenced_schema_id,
+            dependent_class.name as dependent_name,
+            dependent_class.schema as dependent_schema_id,
+            referenced.kind as kind
+        from referenced
+        join dependency on referenced.id=dependency.id
+        join class as dependent_class on dependency.ref=dependent_class.id
+        where
+            (referenced.name != dependent_class.name or
+             referenced.schema != dependent_class.schema)
+    )
+
+    select
+        referenced_schema.name as referenced_schema,
+        relationships.referenced_name as referenced_name,
+        dependent_schema.name as dependent_schema,
+        relationships.dependent_name as dependent_name
+    from relationships
+    join schema as dependent_schema on relationships.dependent_schema_id=dependent_schema.id
+    join schema as referenced_schema on relationships.referenced_schema_id=referenced_schema.id
+    group by referenced_schema, referenced_name, dependent_schema, dependent_name
+    order by referenced_schema, referenced_name, dependent_schema, dependent_name;
+21:51:47.796570 [debug] [MainThread]: SQL status: SELECT 1 in 0.01 seconds
+21:51:47.797669 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '54ec85e3-aa61-49c8-8c86-84558f90bc14', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f86aa3a8670>]}
+21:51:47.797902 [debug] [MainThread]: On master: ROLLBACK
+21:51:47.798203 [debug] [MainThread]: Using postgres connection "master"
+21:51:47.798313 [debug] [MainThread]: On master: BEGIN
+21:51:47.800422 [debug] [MainThread]: SQL status: BEGIN in 0.0 seconds
+21:51:47.800551 [debug] [MainThread]: On master: COMMIT
+21:51:47.800634 [debug] [MainThread]: Using postgres connection "master"
+21:51:47.800706 [debug] [MainThread]: On master: COMMIT
+21:51:47.801059 [debug] [MainThread]: SQL status: COMMIT in 0.0 seconds
+21:51:47.801198 [debug] [MainThread]: On master: Close
+21:51:47.801506 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+21:51:47.801695 [info ] [MainThread]: 
+21:51:47.804784 [debug] [Thread-1  ]: Began running node model.airbyte_rewards.rewards_users
+21:51:47.805004 [info ] [Thread-1  ]: 1 of 1 START table model public.rewards_users .................................. [RUN]
+21:51:47.805389 [debug] [Thread-1  ]: Acquiring new postgres connection "model.airbyte_rewards.rewards_users"
+21:51:47.805516 [debug] [Thread-1  ]: Began compiling node model.airbyte_rewards.rewards_users
+21:51:47.805609 [debug] [Thread-1  ]: Compiling model.airbyte_rewards.rewards_users
+21:51:47.807907 [debug] [Thread-1  ]: Writing injected SQL for node "model.airbyte_rewards.rewards_users"
+21:51:47.808174 [debug] [Thread-1  ]: finished collecting timing info
+21:51:47.808288 [debug] [Thread-1  ]: Began executing node model.airbyte_rewards.rewards_users
+21:51:47.833279 [debug] [Thread-1  ]: Writing runtime SQL for node "model.airbyte_rewards.rewards_users"
+21:51:47.833574 [debug] [Thread-1  ]: Using postgres connection "model.airbyte_rewards.rewards_users"
+21:51:47.833673 [debug] [Thread-1  ]: On model.airbyte_rewards.rewards_users: BEGIN
+21:51:47.833741 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+21:51:47.842968 [debug] [Thread-1  ]: SQL status: BEGIN in 0.01 seconds
+21:51:47.843090 [debug] [Thread-1  ]: Using postgres connection "model.airbyte_rewards.rewards_users"
+21:51:47.843161 [debug] [Thread-1  ]: On model.airbyte_rewards.rewards_users: /* {"app": "dbt", "dbt_version": "1.1.1", "profile_name": "airbyte_rewards", "target_name": "dev", "node_id": "model.airbyte_rewards.rewards_users"} */
+
+
+  create  table "rewards"."public"."rewards_users__dbt_tmp"
+  as (
+    /*
+    Welcome to your first dbt model!
+    Did you know that you can also configure models directly within SQL files?
+    This will override configurations stated in dbt_project.yml
+
+    Try changing "table" to "view" below
+*/
+
+
+
+-- with source_data as (
+
+--     select 1 as id
+--     union all
+--     select null as id
+
+-- )
+
+
+select
+  id, user_id, first_name, last_name, email, contact, gender, to_date(dob::text,'YYYY-MM-DD') as dob, location, latitude, longitude, work_status, preferred_languages, is_mother, family_type, interests, durables, to_date(created_time::text,'YYYY-MM-DD')  as created_time, to_date(updated_time::text,'YYYY-MM-DD') as updated_time, is_deleted, profession_type, income_slab, device_details, is_email_verified, referral_code, referred_by, state_name, is_email_invalid, is_rewards_disabled, rewards_app_login, is_expecting, helpdesk_membership_id, city, user_tags, rfm_cluster_score
+from users
+
+/*
+    Uncomment the line below to remove records with null `id` values
+*/
+
+-- where id is not null
+  );
+21:51:49.267895 [debug] [Thread-1  ]: SQL status: SELECT 286046 in 1.42 seconds
+21:51:49.273505 [debug] [Thread-1  ]: Using postgres connection "model.airbyte_rewards.rewards_users"
+21:51:49.273661 [debug] [Thread-1  ]: On model.airbyte_rewards.rewards_users: /* {"app": "dbt", "dbt_version": "1.1.1", "profile_name": "airbyte_rewards", "target_name": "dev", "node_id": "model.airbyte_rewards.rewards_users"} */
+alter table "rewards"."public"."rewards_users__dbt_tmp" rename to "rewards_users"
+21:51:49.275139 [debug] [Thread-1  ]: SQL status: ALTER TABLE in 0.0 seconds
+21:51:49.283941 [debug] [Thread-1  ]: On model.airbyte_rewards.rewards_users: COMMIT
+21:51:49.284065 [debug] [Thread-1  ]: Using postgres connection "model.airbyte_rewards.rewards_users"
+21:51:49.284136 [debug] [Thread-1  ]: On model.airbyte_rewards.rewards_users: COMMIT
+21:51:49.342038 [debug] [Thread-1  ]: SQL status: COMMIT in 0.06 seconds
+21:51:49.345964 [debug] [Thread-1  ]: Using postgres connection "model.airbyte_rewards.rewards_users"
+21:51:49.346083 [debug] [Thread-1  ]: On model.airbyte_rewards.rewards_users: /* {"app": "dbt", "dbt_version": "1.1.1", "profile_name": "airbyte_rewards", "target_name": "dev", "node_id": "model.airbyte_rewards.rewards_users"} */
+drop table if exists "rewards"."public"."rewards_users__dbt_backup" cascade
+21:51:49.348247 [debug] [Thread-1  ]: SQL status: DROP TABLE in 0.0 seconds
+21:51:49.349221 [debug] [Thread-1  ]: finished collecting timing info
+21:51:49.349357 [debug] [Thread-1  ]: On model.airbyte_rewards.rewards_users: Close
+21:51:49.349801 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '54ec85e3-aa61-49c8-8c86-84558f90bc14', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f86a85a6580>]}
+21:51:49.350127 [info ] [Thread-1  ]: 1 of 1 OK created table model public.rewards_users ............................. [[32mSELECT 286046[0m in 1.54s]
+21:51:49.350592 [debug] [Thread-1  ]: Finished running node model.airbyte_rewards.rewards_users
+21:51:49.351663 [debug] [MainThread]: Acquiring new postgres connection "master"
+21:51:49.351804 [debug] [MainThread]: Using postgres connection "master"
+21:51:49.351888 [debug] [MainThread]: On master: BEGIN
+21:51:49.351951 [debug] [MainThread]: Opening a new connection, currently in state closed
+21:51:49.363152 [debug] [MainThread]: SQL status: BEGIN in 0.01 seconds
+21:51:49.363287 [debug] [MainThread]: On master: COMMIT
+21:51:49.363361 [debug] [MainThread]: Using postgres connection "master"
+21:51:49.363425 [debug] [MainThread]: On master: COMMIT
+21:51:49.363732 [debug] [MainThread]: SQL status: COMMIT in 0.0 seconds
+21:51:49.363856 [debug] [MainThread]: On master: Close
+21:51:49.364219 [info ] [MainThread]: 
+21:51:49.364452 [info ] [MainThread]: Finished running 1 table model in 1.64s.
+21:51:49.364640 [debug] [MainThread]: Connection 'master' was properly closed.
+21:51:49.364743 [debug] [MainThread]: Connection 'model.airbyte_rewards.rewards_users' was properly closed.
+21:51:49.369919 [info ] [MainThread]: 
+21:51:49.370174 [info ] [MainThread]: [32mCompleted successfully[0m
+21:51:49.370475 [info ] [MainThread]: 
+21:51:49.370678 [info ] [MainThread]: Done. PASS=1 WARN=0 ERROR=0 SKIP=0 TOTAL=1
+21:51:49.370990 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f86abb8f0d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f86aa336100>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f86a9e49880>]}
+
+
+============================== 2022-07-14 08:58:55.690985 | a507c5eb-2f5c-4e3d-851c-5797ba0707ea ==============================
+08:58:55.691006 [info ] [MainThread]: Running with dbt=1.1.1
+08:58:55.691585 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': '/root/.dbt', 'send_anonymous_usage_stats': True, 'event_buffer_size': 100000, 'quiet': False, 'no_print': False, 'which': 'run', 'rpc_method': 'run', 'indirect_selection': 'eager'}
+08:58:55.691759 [debug] [MainThread]: Tracking: tracking
+08:58:55.696461 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fb63e353250>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fb63e353fd0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fb63e353af0>]}
+08:58:55.735019 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 1 files added, 1 files changed.
+08:58:55.735399 [debug] [MainThread]: Partial parsing: added file: airbyte_rewards://models/example/rewards_campaigns.sql
+08:58:55.736049 [debug] [MainThread]: Partial parsing: update schema file: airbyte_rewards://models/example/schema.yml
+08:58:55.747631 [debug] [MainThread]: 1699: static parser successfully parsed example/rewards_campaigns.sql
+08:58:55.827940 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'a507c5eb-2f5c-4e3d-851c-5797ba0707ea', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fb63e353430>]}
+08:58:55.832934 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'a507c5eb-2f5c-4e3d-851c-5797ba0707ea', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fb63e357070>]}
+08:58:55.833203 [info ] [MainThread]: Found 2 models, 8 tests, 0 snapshots, 0 analyses, 167 macros, 0 operations, 0 seed files, 0 sources, 0 exposures, 0 metrics
+08:58:55.833410 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'a507c5eb-2f5c-4e3d-851c-5797ba0707ea', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fb63e3570d0>]}
+08:58:55.834594 [info ] [MainThread]: 
+08:58:55.834989 [debug] [MainThread]: Acquiring new postgres connection "master"
+08:58:55.835709 [debug] [ThreadPool]: Acquiring new postgres connection "list_rewards"
+08:58:55.843751 [debug] [ThreadPool]: Using postgres connection "list_rewards"
+08:58:55.843879 [debug] [ThreadPool]: On list_rewards: /* {"app": "dbt", "dbt_version": "1.1.1", "profile_name": "airbyte_rewards", "target_name": "dev", "connection_name": "list_rewards"} */
+
+    select distinct nspname from pg_namespace
+  
+08:58:55.843954 [debug] [ThreadPool]: Opening a new connection, currently in state init
+08:58:55.860398 [debug] [ThreadPool]: SQL status: SELECT 6 in 0.02 seconds
+08:58:55.861522 [debug] [ThreadPool]: On list_rewards: Close
+08:58:55.862625 [debug] [ThreadPool]: Acquiring new postgres connection "list_rewards_public"
+08:58:55.867328 [debug] [ThreadPool]: Using postgres connection "list_rewards_public"
+08:58:55.867450 [debug] [ThreadPool]: On list_rewards_public: BEGIN
+08:58:55.867521 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+08:58:55.879347 [debug] [ThreadPool]: SQL status: BEGIN in 0.01 seconds
+08:58:55.879471 [debug] [ThreadPool]: Using postgres connection "list_rewards_public"
+08:58:55.879544 [debug] [ThreadPool]: On list_rewards_public: /* {"app": "dbt", "dbt_version": "1.1.1", "profile_name": "airbyte_rewards", "target_name": "dev", "connection_name": "list_rewards_public"} */
+select
+      'rewards' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'public'
+    union all
+    select
+      'rewards' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'public'
+  
+08:58:55.883364 [debug] [ThreadPool]: SQL status: SELECT 86 in 0.0 seconds
+08:58:55.885612 [debug] [ThreadPool]: On list_rewards_public: ROLLBACK
+08:58:55.886064 [debug] [ThreadPool]: On list_rewards_public: Close
+08:58:55.890035 [debug] [MainThread]: Using postgres connection "master"
+08:58:55.890151 [debug] [MainThread]: On master: BEGIN
+08:58:55.890219 [debug] [MainThread]: Opening a new connection, currently in state init
+08:58:55.901025 [debug] [MainThread]: SQL status: BEGIN in 0.01 seconds
+08:58:55.901172 [debug] [MainThread]: Using postgres connection "master"
+08:58:55.901245 [debug] [MainThread]: On master: /* {"app": "dbt", "dbt_version": "1.1.1", "profile_name": "airbyte_rewards", "target_name": "dev", "connection_name": "master"} */
+with relation as (
+        select
+            pg_rewrite.ev_class as class,
+            pg_rewrite.oid as id
+        from pg_rewrite
+    ),
+    class as (
+        select
+            oid as id,
+            relname as name,
+            relnamespace as schema,
+            relkind as kind
+        from pg_class
+    ),
+    dependency as (
+        select distinct
+            pg_depend.objid as id,
+            pg_depend.refobjid as ref
+        from pg_depend
+    ),
+    schema as (
+        select
+            pg_namespace.oid as id,
+            pg_namespace.nspname as name
+        from pg_namespace
+        where nspname != 'information_schema' and nspname not like 'pg\_%'
+    ),
+    referenced as (
+        select
+            relation.id AS id,
+            referenced_class.name ,
+            referenced_class.schema ,
+            referenced_class.kind
+        from relation
+        join class as referenced_class on relation.class=referenced_class.id
+        where referenced_class.kind in ('r', 'v')
+    ),
+    relationships as (
+        select
+            referenced.name as referenced_name,
+            referenced.schema as referenced_schema_id,
+            dependent_class.name as dependent_name,
+            dependent_class.schema as dependent_schema_id,
+            referenced.kind as kind
+        from referenced
+        join dependency on referenced.id=dependency.id
+        join class as dependent_class on dependency.ref=dependent_class.id
+        where
+            (referenced.name != dependent_class.name or
+             referenced.schema != dependent_class.schema)
+    )
+
+    select
+        referenced_schema.name as referenced_schema,
+        relationships.referenced_name as referenced_name,
+        dependent_schema.name as dependent_schema,
+        relationships.dependent_name as dependent_name
+    from relationships
+    join schema as dependent_schema on relationships.dependent_schema_id=dependent_schema.id
+    join schema as referenced_schema on relationships.referenced_schema_id=referenced_schema.id
+    group by referenced_schema, referenced_name, dependent_schema, dependent_name
+    order by referenced_schema, referenced_name, dependent_schema, dependent_name;
+08:58:55.914482 [debug] [MainThread]: SQL status: SELECT 1 in 0.01 seconds
+08:58:55.915437 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'a507c5eb-2f5c-4e3d-851c-5797ba0707ea', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fb63de0e730>]}
+08:58:55.915653 [debug] [MainThread]: On master: ROLLBACK
+08:58:55.916134 [debug] [MainThread]: Using postgres connection "master"
+08:58:55.916240 [debug] [MainThread]: On master: BEGIN
+08:58:55.917042 [debug] [MainThread]: SQL status: BEGIN in 0.0 seconds
+08:58:55.917189 [debug] [MainThread]: On master: COMMIT
+08:58:55.917264 [debug] [MainThread]: Using postgres connection "master"
+08:58:55.917328 [debug] [MainThread]: On master: COMMIT
+08:58:55.917617 [debug] [MainThread]: SQL status: COMMIT in 0.0 seconds
+08:58:55.917733 [debug] [MainThread]: On master: Close
+08:58:55.918033 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+08:58:55.918220 [info ] [MainThread]: 
+08:58:55.921424 [debug] [Thread-1  ]: Began running node model.airbyte_rewards.rewards_campaigns
+08:58:55.921637 [info ] [Thread-1  ]: 1 of 2 START table model public.rewards_campaigns .............................. [RUN]
+08:58:55.921986 [debug] [Thread-1  ]: Acquiring new postgres connection "model.airbyte_rewards.rewards_campaigns"
+08:58:55.922122 [debug] [Thread-1  ]: Began compiling node model.airbyte_rewards.rewards_campaigns
+08:58:55.922215 [debug] [Thread-1  ]: Compiling model.airbyte_rewards.rewards_campaigns
+08:58:55.925253 [debug] [Thread-1  ]: Writing injected SQL for node "model.airbyte_rewards.rewards_campaigns"
+08:58:55.925497 [debug] [Thread-1  ]: finished collecting timing info
+08:58:55.925604 [debug] [Thread-1  ]: Began executing node model.airbyte_rewards.rewards_campaigns
+08:58:55.949556 [debug] [Thread-1  ]: Writing runtime SQL for node "model.airbyte_rewards.rewards_campaigns"
+08:58:55.949808 [debug] [Thread-1  ]: Using postgres connection "model.airbyte_rewards.rewards_campaigns"
+08:58:55.949913 [debug] [Thread-1  ]: On model.airbyte_rewards.rewards_campaigns: BEGIN
+08:58:55.949981 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+08:58:55.960828 [debug] [Thread-1  ]: SQL status: BEGIN in 0.01 seconds
+08:58:55.960949 [debug] [Thread-1  ]: Using postgres connection "model.airbyte_rewards.rewards_campaigns"
+08:58:55.961020 [debug] [Thread-1  ]: On model.airbyte_rewards.rewards_campaigns: /* {"app": "dbt", "dbt_version": "1.1.1", "profile_name": "airbyte_rewards", "target_name": "dev", "node_id": "model.airbyte_rewards.rewards_campaigns"} */
+
+
+  create  table "rewards"."public"."rewards_campaigns__dbt_tmp"
+  as (
+    /*
+    Welcome to your first dbt model!
+    Did you know that you can also configure models directly within SQL files?
+    This will override configurations stated in dbt_project.yml
+
+    Try changing "table" to "view" below
+*/
+
+
+
+
+SELECT id, to_char(to_timestamp(created_time), 'YYYY-MM-DD HH:mm:dd') as created_time, 
+to_char(to_timestamp(updated_time), 'YYYY-MM-DD HH:mm:dd') as updated_time, created_by, is_active, brand_id, po_number, "name", 
+name_slug, to_char(to_timestamp(start_time), 'YYYY-MM-DD HH:mm:dd') as start_time, 
+to_char(to_timestamp(end_time), 'YYYY-MM-DD HH:mm:dd') as end_time, description, incentive_type, is_fixed_amount, amount, min_amount, 
+max_amount, voucher_brand, deliverable_types, is_deleted, approval_status, approved_by, to_char(to_timestamp(approved_time), 'YYYY-MM-DD HH:mm:dd') as approved_time, 
+image_url, max_slots, terms, read_this, moderation_required, total_payout, restricted_campaign, extended_campaign, 
+extended_submission_time, proof_instructions, auto_rejection_days, reimbursement, pre_proof_required, auto_rejection_hours, 
+variable_reward_min_range, variable_reward_max_range, variable_reward_identifier_id, variable_reward_referee_min_range, 
+variable_reward_referee_max_range, variable_reward_key, campaign_type, campaign_template_id, brand_alias_id, 
+to_char(to_timestamp(last_sync_time), 'YYYY-MM-DD HH:mm:dd') as last_sync_time, hashtags, campaign_tags, campaign_template_cat_id, creator_name, live_date
+FROM campaigns
+  );
+08:58:56.096121 [debug] [Thread-1  ]: SQL status: SELECT 6825 in 0.13 seconds
+08:58:56.101792 [debug] [Thread-1  ]: Using postgres connection "model.airbyte_rewards.rewards_campaigns"
+08:58:56.101955 [debug] [Thread-1  ]: On model.airbyte_rewards.rewards_campaigns: /* {"app": "dbt", "dbt_version": "1.1.1", "profile_name": "airbyte_rewards", "target_name": "dev", "node_id": "model.airbyte_rewards.rewards_campaigns"} */
+alter table "rewards"."public"."rewards_campaigns__dbt_tmp" rename to "rewards_campaigns"
+08:58:56.102879 [debug] [Thread-1  ]: SQL status: ALTER TABLE in 0.0 seconds
+08:58:56.112320 [debug] [Thread-1  ]: On model.airbyte_rewards.rewards_campaigns: COMMIT
+08:58:56.112443 [debug] [Thread-1  ]: Using postgres connection "model.airbyte_rewards.rewards_campaigns"
+08:58:56.112514 [debug] [Thread-1  ]: On model.airbyte_rewards.rewards_campaigns: COMMIT
+08:58:56.271272 [debug] [Thread-1  ]: SQL status: COMMIT in 0.16 seconds
+08:58:56.276268 [debug] [Thread-1  ]: Using postgres connection "model.airbyte_rewards.rewards_campaigns"
+08:58:56.276443 [debug] [Thread-1  ]: On model.airbyte_rewards.rewards_campaigns: /* {"app": "dbt", "dbt_version": "1.1.1", "profile_name": "airbyte_rewards", "target_name": "dev", "node_id": "model.airbyte_rewards.rewards_campaigns"} */
+drop table if exists "rewards"."public"."rewards_campaigns__dbt_backup" cascade
+08:58:56.278708 [debug] [Thread-1  ]: SQL status: DROP TABLE in 0.0 seconds
+08:58:56.279813 [debug] [Thread-1  ]: finished collecting timing info
+08:58:56.279961 [debug] [Thread-1  ]: On model.airbyte_rewards.rewards_campaigns: Close
+08:58:56.280445 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'a507c5eb-2f5c-4e3d-851c-5797ba0707ea', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fb63e2470d0>]}
+08:58:56.280772 [info ] [Thread-1  ]: 1 of 2 OK created table model public.rewards_campaigns ......................... [[32mSELECT 6825[0m in 0.36s]
+08:58:56.281305 [debug] [Thread-1  ]: Finished running node model.airbyte_rewards.rewards_campaigns
+08:58:56.281509 [debug] [Thread-1  ]: Began running node model.airbyte_rewards.rewards_users
+08:58:56.281811 [info ] [Thread-1  ]: 2 of 2 START table model public.rewards_users .................................. [RUN]
+08:58:56.282174 [debug] [Thread-1  ]: Acquiring new postgres connection "model.airbyte_rewards.rewards_users"
+08:58:56.282297 [debug] [Thread-1  ]: Began compiling node model.airbyte_rewards.rewards_users
+08:58:56.282392 [debug] [Thread-1  ]: Compiling model.airbyte_rewards.rewards_users
+08:58:56.284767 [debug] [Thread-1  ]: Writing injected SQL for node "model.airbyte_rewards.rewards_users"
+08:58:56.285067 [debug] [Thread-1  ]: finished collecting timing info
+08:58:56.285183 [debug] [Thread-1  ]: Began executing node model.airbyte_rewards.rewards_users
+08:58:56.288713 [debug] [Thread-1  ]: Writing runtime SQL for node "model.airbyte_rewards.rewards_users"
+08:58:56.288992 [debug] [Thread-1  ]: Using postgres connection "model.airbyte_rewards.rewards_users"
+08:58:56.289121 [debug] [Thread-1  ]: On model.airbyte_rewards.rewards_users: BEGIN
+08:58:56.289197 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+08:58:56.300447 [debug] [Thread-1  ]: SQL status: BEGIN in 0.01 seconds
+08:58:56.300570 [debug] [Thread-1  ]: Using postgres connection "model.airbyte_rewards.rewards_users"
+08:58:56.300642 [debug] [Thread-1  ]: On model.airbyte_rewards.rewards_users: /* {"app": "dbt", "dbt_version": "1.1.1", "profile_name": "airbyte_rewards", "target_name": "dev", "node_id": "model.airbyte_rewards.rewards_users"} */
+
+
+  create  table "rewards"."public"."rewards_users__dbt_tmp"
+  as (
+    /*
+    Welcome to your first dbt model!
+    Did you know that you can also configure models directly within SQL files?
+    This will override configurations stated in dbt_project.yml
+
+    Try changing "table" to "view" below
+*/
+
+
+
+-- with source_data as (
+
+--     select 1 as id
+--     union all
+--     select null as id
+
+-- )
+
+
+select
+  id, user_id, first_name, last_name, email, contact, gender, to_date(dob::text,'YYYY-MM-DD') as dob, location, latitude, longitude, work_status, preferred_languages, is_mother, family_type, interests, durables, to_date(created_time::text,'YYYY-MM-DD')  as created_time, to_date(updated_time::text,'YYYY-MM-DD') as updated_time, is_deleted, profession_type, income_slab, device_details, is_email_verified, referral_code, referred_by, state_name, is_email_invalid, is_rewards_disabled, rewards_app_login, is_expecting, helpdesk_membership_id, city, user_tags, rfm_cluster_score
+from users
+
+/*
+    Uncomment the line below to remove records with null `id` values
+*/
+
+-- where id is not null
+  );
+08:58:57.671233 [debug] [Thread-1  ]: SQL status: SELECT 286046 in 1.37 seconds
+08:58:57.673733 [debug] [Thread-1  ]: Using postgres connection "model.airbyte_rewards.rewards_users"
+08:58:57.673907 [debug] [Thread-1  ]: On model.airbyte_rewards.rewards_users: /* {"app": "dbt", "dbt_version": "1.1.1", "profile_name": "airbyte_rewards", "target_name": "dev", "node_id": "model.airbyte_rewards.rewards_users"} */
+alter table "rewards"."public"."rewards_users__dbt_tmp" rename to "rewards_users"
+08:58:57.674596 [debug] [Thread-1  ]: SQL status: ALTER TABLE in 0.0 seconds
+08:58:57.675834 [debug] [Thread-1  ]: On model.airbyte_rewards.rewards_users: COMMIT
+08:58:57.675963 [debug] [Thread-1  ]: Using postgres connection "model.airbyte_rewards.rewards_users"
+08:58:57.676034 [debug] [Thread-1  ]: On model.airbyte_rewards.rewards_users: COMMIT
+08:58:57.758221 [debug] [Thread-1  ]: SQL status: COMMIT in 0.08 seconds
+08:58:57.760298 [debug] [Thread-1  ]: Using postgres connection "model.airbyte_rewards.rewards_users"
+08:58:57.760434 [debug] [Thread-1  ]: On model.airbyte_rewards.rewards_users: /* {"app": "dbt", "dbt_version": "1.1.1", "profile_name": "airbyte_rewards", "target_name": "dev", "node_id": "model.airbyte_rewards.rewards_users"} */
+drop table if exists "rewards"."public"."rewards_users__dbt_backup" cascade
+08:58:57.762285 [debug] [Thread-1  ]: SQL status: DROP TABLE in 0.0 seconds
+08:58:57.763328 [debug] [Thread-1  ]: finished collecting timing info
+08:58:57.763467 [debug] [Thread-1  ]: On model.airbyte_rewards.rewards_users: Close
+08:58:57.763942 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'a507c5eb-2f5c-4e3d-851c-5797ba0707ea', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fb63c51cc10>]}
+08:58:57.764282 [info ] [Thread-1  ]: 2 of 2 OK created table model public.rewards_users ............................. [[32mSELECT 286046[0m in 1.48s]
+08:58:57.764735 [debug] [Thread-1  ]: Finished running node model.airbyte_rewards.rewards_users
+08:58:57.765806 [debug] [MainThread]: Acquiring new postgres connection "master"
+08:58:57.765960 [debug] [MainThread]: Using postgres connection "master"
+08:58:57.766036 [debug] [MainThread]: On master: BEGIN
+08:58:57.766100 [debug] [MainThread]: Opening a new connection, currently in state closed
+08:58:57.776557 [debug] [MainThread]: SQL status: BEGIN in 0.01 seconds
+08:58:57.776689 [debug] [MainThread]: On master: COMMIT
+08:58:57.776764 [debug] [MainThread]: Using postgres connection "master"
+08:58:57.776827 [debug] [MainThread]: On master: COMMIT
+08:58:57.777151 [debug] [MainThread]: SQL status: COMMIT in 0.0 seconds
+08:58:57.777272 [debug] [MainThread]: On master: Close
+08:58:57.777625 [info ] [MainThread]: 
+08:58:57.777813 [info ] [MainThread]: Finished running 2 table models in 1.94s.
+08:58:57.777998 [debug] [MainThread]: Connection 'master' was properly closed.
+08:58:57.778096 [debug] [MainThread]: Connection 'model.airbyte_rewards.rewards_users' was properly closed.
+08:58:57.782492 [info ] [MainThread]: 
+08:58:57.782672 [info ] [MainThread]: [32mCompleted successfully[0m
+08:58:57.782902 [info ] [MainThread]: 
+08:58:57.783092 [info ] [MainThread]: Done. PASS=2 WARN=0 ERROR=0 SKIP=0 TOTAL=2
+08:58:57.783357 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fb63ddb7a00>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fb63e367d90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fb63c4f1640>]}

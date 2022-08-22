@@ -1,0 +1,165 @@
+version: 2
+
+models:
+  - name: users_info_18_aug
+    description: "user info model"
+    columns:
+      - name: user_id
+        description: "The primary key for this table"
+        tests:
+          - unique
+          - not_null
+      - name: user_name    
+      - name: email
+        tests:
+          - unique
+          - not_null
+      - name: city
+      - name: gender
+      - name: blog_title_slug
+      - name: doc_created_time
+      - name: doc_updated_time
+      - name: is_lang_selected
+      - name: is_validated
+      - name: last_login
+      - name: mobile
+      - name: preferred_languages
+        config:
+          column_types:
+            lang: varchar(50)
+            preferred: varchar(50)
+      - name: profile_created_time
+      - name: profile_url
+      - name: profile_source
+      - name: user_dob
+      - name: user_bio
+      - name: user_type
+      - name: user_type_verbose
+      - name: is_email_invalid
+      - name: lang_subscription
+      - name: profile_pic_url
+      - name: app_lang
+      - name: web_fcm_token_available
+      - name: android_fcm_token_available
+      - name: ios_fcm_token_available
+      - name: published_articles
+      - name: published_tags
+      - name: is_sponsored_author
+      - name: published_langs
+      - name: is_top_blogger
+      - name: first_article_time
+      - name: total_views
+      - name: insta_id
+      - name: insta_user_name
+      - name: is_vlogger
+      - name: is_creator
+      - name: is_blogger
+      - name: vlogs_created
+      - name: rewards_app_login
+      - name: is_short_story_writer
+      - name: momspresso_last_activity
+      - name: mymoney_last_activity
+      - name: work_status
+      - name: interest_tags
+      - name: android_uninstall
+      - name: ios_uninstall
+      - name: app_uninstall_time
+      - name: story_score
+      - name: sql_id
+      - name: kids
+      - name: social_profile
+      - name: interests
+      - name: subscription
+      - name: blog_title
+      - name: is_user_handle_updated
+      - name: total_badges
+      - name: user_handle
+      - name: total_campaigns_applied
+      - name: email_validated
+      - name: user_agent
+      - name: city_id
+      - name: subscribe_blog
+      - name: rewards_added
+      - name: is_rewards_primary_account
+      - name: latitude
+      - name: longitude
+      - name: bounce_count
+      - name: score
+      - name: code
+      - name: expected_date
+      - name: adid
+      - name: phone_login_medium
+      - name: is_taggable
+      - name: user_deliverables_types
+      - name: video_preferred_languages
+      - name: settings
+      - name: follow_article_categories
+      - name: follow_video_categories
+      - name: follow_story_categories
+      - name: following_count
+      - name: followers_count
+      - name: location_detail
+      - name: insta_followers_count
+      - name: email_verify
+      - name: mobile_token
+      - name: sort_type
+      - name: subscription_email
+      - name: mobile_validated
+      - name: state_name
+      - name: crown
+      - name: attribute_type
+      - name: attribute_name
+      - name: attribute_value
+      - name: subscribe_email
+      - name: subscribe_newsletter
+      - name: insta_following_count
+      - name: social_id
+      - name: article_likes
+      - name: categories_followed
+      - name: video_likes
+      - name: is_parent
+      - name: is_deleted
+      - name: social_tokens
+      - name: insta_expired_in
+      - name: insta_short_access_token
+      - name: insta_long_access_token
+      - name: gp_id
+      - name: fb_id
+      - name: google_id
+      - name: twitter_id
+      - name: facebook_id
+      - name: updated_at
+  - name: kids_info_18_aug
+    description: "Kids info table model"
+    columns:
+      - name: rewards_id
+        description: "The primary key for this table"
+        tests:
+          - unique
+          - not_null
+      - name: user_id
+      - name: doc_created_time
+      - name: doc_updated_time
+      - name: kid_dob
+      - name: kid_name
+      - name: kid_gender
+      - name: expected_date
+
+  - name: social_tokens_18_aug
+    description: "Social Token table model"
+    columns:
+      - name: id
+        description: "The primary key for this table"
+        tests:
+          - unique
+          - not_null
+      - name: user_id
+      - name: doc_created_time
+      - name: doc_updated_time
+      - name: insta_short_access_token
+      - name: insta_long_access_token
+      - name: medium
+      - name: expired_in
+      - name: insta_id
+      - name: insta_user_name
+      - name: fb_graph_api_long_access_token
