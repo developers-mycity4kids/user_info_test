@@ -24,7 +24,11 @@ clean-targets:         # directories to be removed by `dbt clean`
   - "target"
   - "dbt_packages"
 
-    
+# This package adds an automatic hook to create constraints
+on-run-end:
+  - "{{ airbyte_users_info_22_aug.create_constraints() }}"
+
+
 # Global variables
 vars:
   # The package can be temporarily disabled using this variable

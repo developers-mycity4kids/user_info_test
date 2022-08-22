@@ -7,8 +7,8 @@ models:
       - name: user_id
         description: "The primary key for this table"
         tests:
-          - dbt_constraints.primary_key
-          - dbt_constraints.unique_key
+          - airbyte_users_info_22_aug.primary_key
+          - airbyte_users_info_22_aug.unique_key
           - unique
           - not_null
       - name: user_name    
@@ -137,7 +137,7 @@ models:
       - name: rewards_id
         description: "The primary key for this table"
         tests:
-          - dbt_constraints.primary_key
+          - airbyte_users_info_22_aug.primary_key
           - unique
           - not_null
       - name: user_id
@@ -154,19 +154,19 @@ models:
       - name: id
         description: "The primary key for this table"
         tests:
-          - dbt_constraints.primary_key
+          - airbyte_users_info_22_aug.primary_key
           - unique
           - not_null
       - name: user_id
         tests :
-          - dbt_constraints.unique_key
+          - airbyte_users_info_22_aug.unique_key
       - name: doc_created_time
       - name: doc_updated_time
       - name: insta_short_access_token
       - name: insta_long_access_token
       - name: medium
         tests:
-          - dbt_constraints.unique_key
+          - airbyte_users_info_22_aug.unique_key
       - name: expired_in
       - name: insta_id
       - name: insta_user_name
